@@ -1,0 +1,7 @@
+escape ^tt
+startup_message off
+bind k
+bind ^k
+bind K kill
+autodetach on
+
