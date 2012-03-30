@@ -6,8 +6,6 @@ if [ -f /etc/bashrc ]; then
 fi
 
 # User specific aliases and functions
-source ~/.nvm/nvm.sh
-
 export TZ=Asia/Tokyo
 export LANG=ja_JP.utf8
 export LD_LIBRARY_PATH=/usr/local/lib:/usr/lib:/lib
@@ -17,5 +15,7 @@ export HISTCONTROL=ignoredups
 export GREP_OPTIONS='--color=auto'
 
 alias vi='vim'
+
+[ -f ~/.nvm/nvm.sh ] && source ~/.nvm/nvm.sh
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
