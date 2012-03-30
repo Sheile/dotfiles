@@ -21,3 +21,6 @@ done
 # vim用にbackup/swapディレクトリ作成
 mkdir -p ~/.vim/backup
 mkdir -p ~/.vim/swap
+
+# submoduleの読み込み
+git submodule update --init
