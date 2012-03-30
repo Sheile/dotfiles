@@ -17,3 +17,7 @@ do
         ln -Fs "$PWD/$dotfile" $HOME
     fi
 done
+
+# vim用にbackup/swapディレクトリ作成
+mkdir -p ~/.vim/backup
+mkdir -p ~/.vim/swap
