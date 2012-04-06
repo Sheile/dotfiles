@@ -78,7 +78,7 @@ autocmd BufNewFile,BufRead *.scss set filetype=css
 
 " ----- color scheme -----
 set t_Co=256
-colorscheme desert
+colorscheme desert256
 
 " ----- Encoding -----
 " via: http://www.kawaz.jp/pukiwiki/?vim#cb691f26
