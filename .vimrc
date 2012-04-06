@@ -142,6 +142,14 @@ endif
 " auto-start neocomplcache without :NeoCompleCacheEnable
 let g:neocomplcache_enable_at_startup = 1
 
+" 補完のショートカットキーをCtrl-Spaceに変更
+" http://stackoverflow.com/questions/510503/ctrlspace-for-omni-and-keyword-completion-in-vim
+inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
+\ "\<lt>C-n>" :
+\ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .
+\ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .
+\ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
+imap <C-@> <C-Space>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 """ rails.vim
