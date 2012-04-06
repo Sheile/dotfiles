@@ -1,7 +1,10 @@
+# Change trigger key to Ctrl-T
 escape ^tt
-startup_message off
+
+# Ignore default kill shortcut
 bind k
 bind ^k
 bind K kill
-autodetach on
 
+autodetach on
+startup_message off
