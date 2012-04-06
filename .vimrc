@@ -57,6 +57,9 @@ set wrapscan
 set hlsearch
 set ignorecase
 
+"Escの2回押しでハイライト消去
+nmap <ESC><ESC> :nohlsearch<CR><ESC>
+
 " ----- backup -----
 set backup
 set backupdir=~/.vim/backup
