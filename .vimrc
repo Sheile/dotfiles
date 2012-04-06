@@ -76,6 +76,9 @@ nnoremap k gk
 " 拡張子毎のSyntax highlightを適用
 autocmd BufNewFile,BufRead *.scss set filetype=css
 
+" ----- color scheme -----
+set t_Co=256
+colorscheme desert
 
 " ----- Encoding -----
 " via: http://www.kawaz.jp/pukiwiki/?vim#cb691f26
