@@ -18,3 +18,7 @@ mkdir -p ~/.vim/swap
 
 # submoduleの読み込み
 git submodule update --init
+
+# vim用のcolor schemeへのリンク作成
+mkdir -p ~/.vim/colors
+ln -Fs "$PWD/desert256.vim/colors/desert256.vim" "$HOME/.vim/colors/desert256.vim"
