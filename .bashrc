@@ -18,4 +18,3 @@ alias vi='vim'
 
 [ -f ~/.nvm/nvm.sh ] && source ~/.nvm/nvm.sh
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
