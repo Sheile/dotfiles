@@ -1,3 +1,8 @@
+" ----- screen上で起動された場合の特殊キー対応 -----
+if $TERM == 'screen-bce' || $TERM == 'screen'
+set term=xterm
+endif
+
 " ----- pluginのインストール -----
 set nocompatible
 filetype off
