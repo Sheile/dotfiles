@@ -16,5 +16,3 @@ export GREP_OPTIONS='--color=auto'
 
 alias vi='vim'
 
-[ -f ~/.nvm/nvm.sh ] && source ~/.nvm/nvm.sh
-
