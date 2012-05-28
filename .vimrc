@@ -193,3 +193,10 @@ nnoremap <silent> [unite]u  :<C-u>Unite -no-split buffer file_mru<CR>
 nnoremap <silent> [unite]m  :<C-u>Unite -no-split file_mru<CR>
 " 現在のバッファのカレントディレクトリからファイル一覧
 nnoremap <silent> [unite]d  :<C-u>UniteWithBufferDir -no-split file<CR>
+
+" Ctrl + JはESCとする
+au FileType unite inoremap <silent> <buffer> <C-j> <ESC>
+
+" ESCキーで終了する
+au FileType unite nmap <silent> <buffer> <C-j> <Plug>(unite_exit)
+au FileType unite nmap <silent> <buffer> <ESC> <Plug>(unite_exit)
