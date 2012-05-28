@@ -172,6 +172,9 @@ autocmd User Rails Rnavcommand fabricator spec/fabricators -suffix=_fabricator.r
 """"""""""""""""""""""""""""""""""""""""""""""""""
 """ unite.vim
 """"""""""""""""""""""""""""""""""""""""""""""""""
+" 入力モードで開始する
+let g:unite_enable_start_insert = 1
+
 nnoremap    [unite]   <Nop>
 nmap    f [unite]
 
