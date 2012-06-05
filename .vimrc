@@ -186,7 +186,7 @@ nnoremap <silent> [unite]a  :<C-u>UniteWithCurrentDir -no-split -buffer-name=fil
 " ファイル一覧
 nnoremap <silent> [unite]f  :<C-u>Unite -no-split -buffer-name=files file<CR>
 " バッファ一覧
-nnoremap <silent> [unite]b  :<C-u>Unite -no-split buffer<CR>
+nnoremap <silent> [unite]j  :<C-u>Unite -no-split buffer<CR>
 " 常用セット
 nnoremap <silent> [unite]u  :<C-u>Unite -no-split buffer file_mru<CR>
 " 最近使用したファイル一覧
