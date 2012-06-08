@@ -82,6 +82,15 @@ autocmd BufNewFile,BufRead *.scss set filetype=css
 set t_Co=256
 colorscheme desert256
 
+" ----- cursor line -----
+set cursorline
+" カレントウィンドウにのみ下線を引く
+augroup cch
+  autocmd! cch
+  autocmd WinLeave * set nocursorline
+  autocmd WinEnter,BufRead * set cursorline
+augroup END
+
 " ----- Encoding -----
 " via: http://www.kawaz.jp/pukiwiki/?vim#cb691f26
 " 文字コードの自動認識
