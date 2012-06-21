@@ -16,3 +16,4 @@ export GREP_OPTIONS='--color=auto'
 
 alias vi='vim'
 
+shopt -s checkjobs
