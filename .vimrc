@@ -62,6 +62,7 @@ set hidden
 set wrapscan
 set hlsearch
 set ignorecase
+set incsearch
 
 " ----- backup -----
 set backup
