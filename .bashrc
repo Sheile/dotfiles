@@ -15,5 +15,6 @@ export HISTCONTROL=ignoredups
 export GREP_OPTIONS='--color=auto'
 
 alias vi='vim'
+alias irb='pry'
 
 shopt -s checkjobs
