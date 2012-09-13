@@ -45,16 +45,18 @@ set ruler
 set showcmd
 "set laststatus=2
 
-" ----- edit -----
+" ----- indent -----
 set autoindent
-set cindent
-set showmatch
-set matchtime=1
-set backspace=indent,eol,start
-set expandtab
+set cindent         " smartindentよりも優秀
 set tabstop=2
 set shiftwidth=2
 set expandtab
+
+" ----- edit -----
+set showmatch
+set matchtime=1
+set backspace=indent,eol,start
+
 set wildmenu
 set hidden
 
