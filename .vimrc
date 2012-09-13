@@ -33,6 +33,9 @@ map <F4> :bn<cr>:ls<cr>
 map gb `.zz
 map <c-g> g;
 
+" ----- cursor move -----
+set whichwrap=b,s,h,l,<,>,[,]
+
 " ----- cursor move in input mode -----
 inoremap <C-a> <Home>
 inoremap <C-e> <End>
