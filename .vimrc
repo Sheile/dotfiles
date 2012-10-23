@@ -23,18 +23,10 @@ NeoBundle 'thinca/vim-ref'
 
 
 " ----- key customize -----
-map <F1> <c-w>h
-map <F2> <c-w>l
-imap <F1> <esc><c-w>h
-imap <F2> <esc><c-w>l
-map <F3> :bp<cr>:ls<cr>
-map <F4> :bn<cr>:ls<cr>
-
 map gb `.zz
 map <c-g> g;
 
 " ----- cursor move -----
-set whichwrap=b,s,h,l,<,>,[,]
 
 " ----- cursor move in input mode -----
 inoremap <C-a> <Home>
