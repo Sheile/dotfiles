@@ -1,24 +1,24 @@
 [color]
-	diff = auto
-	status = auto
-	branch = auto
-	grep = auto
+  diff = auto
+  status = auto
+  branch = auto
+  grep = auto
 [core]
-	excludesfile = ~/.gitignore
+  excludesfile = ~/.gitignore
 [push]
-	default = current
+  default = current
 [alias]
-	st = status -sb
-	co = checkout
-	ci = commit -v
-	di = diff
-	br = branch
-	puhs = push
-	psuh = push
-	pus = push
-	puh = push
-	pl = !git pull && git submodule update --init
-	tree = log --graph --pretty=oneline --decorate --date=short --abbrev-commit --branches
+  st = status -sb
+  co = checkout
+  ci = commit -v
+  di = diff
+  br = branch
+  puhs = push
+  psuh = push
+  pus = push
+  puh = push
+  pl = !git pull && git submodule update --init
+  tree = log --graph --pretty=oneline --decorate --date=short --abbrev-commit --branches
 [user]
-	email = sheile1024@gmail.com
-	name = Sheile
+  email = sheile1024@gmail.com
+  name = Sheile
