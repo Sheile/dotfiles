@@ -1,6 +1,0 @@
-[submodule "neobundle.vim"]
-	path = neobundle.vim
-	url = https://github.com/Shougo/neobundle.vim.git
-[submodule "desert256.vim"]
-	path = desert256.vim
-	url = https://github.com/vim-scripts/desert256.vim.git
