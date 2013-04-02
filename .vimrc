@@ -6,11 +6,10 @@ endif
 " ----- pluginのインストール -----
 set nocompatible
 filetype off
-set rtp+=~/dotfiles/neobundle.vim
 
 if has('vim_starting')
-  set runtimepath+=~/dotfiles/neobundle.vim
-  call neobundle#rc(expand('~/.bundle'))
+  set runtimepath+=~/.vim/.bundle/neobundle.vim
+  call neobundle#rc(expand('~/.vim/.bundle'))
 endif
 
 NeoBundle 'Shougo/neocomplcache'
