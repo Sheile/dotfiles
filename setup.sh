@@ -18,10 +18,10 @@ git submodule update --init
 # vim用にbackup/swap/bundleディレクトリ作成
 mkdir -p ~/.vim/backup
 mkdir -p ~/.vim/swap
-mkdir -p ~/.vim/.bundle
+mkdir -p ~/.vim/bundle
 
 # NeoBundleへのリンク作成
-ln -Fs "$PWD/neobundle.vim" "$HOME/.vim/.bundle/neobundle.vim"
+ln -Fs "$PWD/neobundle.vim" "$HOME/.vim/bundle/neobundle.vim"
 
 # vim用のcolor schemeへのリンク作成
 mkdir -p ~/.vim/colors
