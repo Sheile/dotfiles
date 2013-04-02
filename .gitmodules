@@ -1,0 +1,8 @@
+[submodule "neobundle.vim"]
+	path = neobundle.vim
+	url = https://github.com/Shougo/neobundle.vim.git
+	branch = master
+[submodule "desert256.vim"]
+	path = desert256.vim
+	url = https://github.com/vim-scripts/desert256.vim.git
+	branch = master
