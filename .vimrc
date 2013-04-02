@@ -12,6 +12,9 @@ if has('vim_starting')
 endif
 call neobundle#rc(expand('~/.vim/bundle'))
 
+" Let NeoBundle manage NeoBundle
+NeoBundleFetch 'Shougo/neobundle.vim'
+
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neocomplcache-snippets-complete'
 NeoBundle 'Shougo/unite.vim'
@@ -20,6 +23,7 @@ NeoBundle 'tpope/vim-rails'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'thinca/vim-ref'
 
+NeoBundleCheck
 
 " ----- key customize -----
 map gb `.zz
