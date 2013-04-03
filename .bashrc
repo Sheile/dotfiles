@@ -17,5 +17,7 @@ export GREP_OPTIONS='--color=auto'
 alias vi='vim'
 alias irb='pry'
 alias crontab='crontab -i'
+alias jq='jq . -C'
+alias less='less -R'
 
 shopt -s checkjobs
