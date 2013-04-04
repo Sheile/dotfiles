@@ -22,6 +22,7 @@ NeoBundle 'hrp/EnhancedCommentify'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'thinca/vim-ref'
+NeoBundle 'kchmck/vim-coffee-script'
 
 NeoBundle 'Shougo/vimproc', {
   \ 'build' : {
@@ -89,6 +90,7 @@ nnoremap k gk
 
 " 拡張子毎のSyntax highlightを適用
 autocmd BufNewFile,BufRead *.scss set filetype=css
+autocmd BufNewFile,BufRead *.coffee.js set filetype=coffee
 
 " ----- color scheme -----
 set t_Co=256
