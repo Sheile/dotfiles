@@ -23,6 +23,15 @@ NeoBundle 'tpope/vim-rails'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'thinca/vim-ref'
 
+NeoBundle 'Shougo/vimproc', {
+  \ 'build' : {
+  \     'windows' : 'echo "Sorry, cannot update vimproc binary file in Windows."',
+  \     'cygwin' : 'make -f make_cygwin.mak',
+  \     'mac' : 'make -f make_mac.mak',
+  \     'unix' : 'make -f make_unix.mak',
+  \    },
+  \ }
+
 NeoBundleCheck
 
 " ----- key customize -----
