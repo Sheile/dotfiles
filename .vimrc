@@ -97,6 +97,9 @@ autocmd BufNewFile,BufRead *.jst set filetype=html
 set t_Co=256
 colorscheme desert256
 
+" ----- mouse -----
+set mouse=a
+
 " ----- cursor line -----
 set cursorline
 " カレントウィンドウにのみ下線を引く
