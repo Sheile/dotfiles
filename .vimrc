@@ -91,6 +91,7 @@ nnoremap k gk
 " 拡張子毎のSyntax highlightを適用
 autocmd BufNewFile,BufRead *.scss set filetype=css
 autocmd BufNewFile,BufRead *.coffee.js set filetype=coffee
+autocmd BufNewFile,BufRead *.jst set filetype=html
 
 " ----- color scheme -----
 set t_Co=256
