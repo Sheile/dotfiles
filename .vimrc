@@ -92,6 +92,8 @@ nnoremap k gk
 autocmd BufNewFile,BufRead *.scss set filetype=css
 autocmd BufNewFile,BufRead *.coffee.js set filetype=coffee
 autocmd BufNewFile,BufRead *.jst set filetype=html
+autocmd BufNewFile,BufRead *.jst.ejs set filetype=html
+autocmd BufNewFile,BufRead *.jst.eco set filetype=html
 
 " ----- color scheme -----
 set t_Co=256
