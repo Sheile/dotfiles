@@ -5,6 +5,7 @@
   grep = auto
 [core]
   excludesfile = ~/.gitignore
+  pager = less -x2
 [push]
   default = current
 [alias]
