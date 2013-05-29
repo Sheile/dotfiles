@@ -6,6 +6,7 @@
 [core]
   excludesfile = ~/.gitignore
   pager = less -x2
+	editor = vim
 [push]
   default = current
 [alias]
