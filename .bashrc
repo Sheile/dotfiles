@@ -15,6 +15,7 @@ export HISTCONTROL=ignoredups
 export GREP_OPTIONS='--color=auto'
 
 alias vi='vim'
+alias view='vim -R'
 alias irb='pry'
 alias crontab='crontab -i'
 alias jq='jq . -C'
