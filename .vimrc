@@ -19,7 +19,6 @@ NeoBundle 'hrp/EnhancedCommentify'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'thinca/vim-ref'
-NeoBundle 'kchmck/vim-coffee-script'
 
 NeoBundle 'Shougo/vimproc', {
   \ 'build' : {
@@ -29,6 +28,11 @@ NeoBundle 'Shougo/vimproc', {
   \     'unix' : 'make -f make_unix.mak',
   \    },
   \ }
+
+" ----- js関連 -----
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'jelera/vim-javascript-syntax'
+NeoBundle 'teramako/jscomplete-vim'
 
 NeoBundleCheck
 
@@ -223,3 +227,10 @@ au FileType unite inoremap <silent> <buffer> <C-j> <ESC>
 " ESCキーで終了する
 au FileType unite nmap <silent> <buffer> <C-j> <Plug>(unite_exit)
 au FileType unite nmap <silent> <buffer> <ESC> <Plug>(unite_exit)
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
+""" jscomplete-vim.vim
+""""""""""""""""""""""""""""""""""""""""""""""""""
+au FileType javascript :setl omnifunc=jscomplete#CompleteJS
+let g:jscomplete_use = ['dom', 'moz']
