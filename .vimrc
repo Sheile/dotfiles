@@ -76,6 +76,10 @@ set ignorecase
 set smartcase
 set incsearch
 
+" 検索中の/ or ?を自動的にエスケープ
+cnoremap <expr> / getcmdtype() == '/' ? '\/' : '/'
+cnoremap <expr> ? getcmdtype() == '?' ? '\?' : '?'
+
 " ----- backup -----
 set backup
 set backupdir=~/.vim/backup
