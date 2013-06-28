@@ -20,5 +20,6 @@ alias irb='pry'
 alias crontab='crontab -i'
 alias jq='jq . -C'
 alias less='less -R'
+alias sudo='sudo -E '
 
 shopt -s checkjobs
