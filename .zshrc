@@ -2,6 +2,9 @@
 setopt autocd
 setopt auto_pushd
 
+# 補完関連
+unsetopt auto_menu
+
 bindkey -e
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
