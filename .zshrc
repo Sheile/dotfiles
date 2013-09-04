@@ -1,9 +1,7 @@
 # Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
-HISTSIZE=10000
-SAVEHIST=10000
 setopt autocd
 setopt auto_pushd
+
 bindkey -e
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
@@ -18,8 +16,6 @@ export TZ=Asia/Tokyo
 export LANG=ja_JP.utf8
 export LD_LIBRARY_PATH=/usr/local/lib:/usr/lib:/lib
 
-export HISTSIZE=10000
-export HISTCONTROL=ignoredups
 export GREP_OPTIONS='--color=auto'
 
 # Aliases
@@ -40,3 +36,20 @@ chpwd() {
 # <C-s>/<C-q>による画面更新の停止機能を無効化
 stty stop undef
 stty start undef
+
+# history settings
+export HISTFILE=~/.histfile
+export HISTSIZE=1000
+export SAVEHIST=10000
+setopt hist_ignore_dups
+setopt share_history
+setopt hist_no_store
+setopt hist_expand
+
+# 入力中の内容にマッチする物のみ履歴をたどる
+bindkey '^P' history-search-backward
+bindkey '^N' history-search-forward
+
+# インクリメンタルからの検索
+bindkey "^R" history-incremental-search-backward
+bindkey "^S" history-incremental-search-forward
