@@ -36,3 +36,7 @@ alias b='cd ..'
 chpwd() {
   ll
 }
+
+# <C-s>/<C-q>による画面更新の停止機能を無効化
+stty stop undef
+stty start undef
