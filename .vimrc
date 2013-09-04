@@ -69,6 +69,9 @@ set backspace=indent,eol,start
 set wildmenu
 set hidden
 
+" 編集モードでjjと連続で入力することはまず無いので移動のミス入力として扱う
+inoremap jj <Esc>jj
+
 " ----- search -----
 set wrapscan
 set hlsearch
