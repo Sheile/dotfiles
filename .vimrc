@@ -107,6 +107,9 @@ autocmd BufNewFile,BufRead *.jst.eco set filetype=html
 set t_Co=256
 colorscheme desert256
 
+" Uniteの選択行が黒背景になるので修正
+hi PmenuSel ctermfg=0 ctermbg=7 guibg=Grey
+
 " ----- mouse -----
 set mouse=a
 
