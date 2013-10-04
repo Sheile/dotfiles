@@ -83,6 +83,9 @@ set incsearch
 cnoremap <expr> / getcmdtype() == '/' ? '\/' : '/'
 cnoremap <expr> ? getcmdtype() == '?' ? '\?' : '?'
 
+" ESCでハイライト解除
+nnoremap <esc> :noh<return><esc>
+
 " ----- backup -----
 set backup
 set backupdir=~/.vim/backup
