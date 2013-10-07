@@ -278,6 +278,9 @@ au FileType unite inoremap <silent> <buffer> <C-j> <ESC>
 au FileType unite nmap <silent> <buffer> <C-j> <Plug>(unite_exit)
 au FileType unite nmap <silent> <buffer> <ESC> <Plug>(unite_exit)
 
+" Uniteに入る際はpasteモードをOFFにする
+au FileType unite set nopaste
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 """ jscomplete-vim.vim
