@@ -116,6 +116,17 @@ hi PmenuSel ctermfg=0 ctermbg=7 guibg=Grey
 " ----- mouse -----
 set mouse=a
 
+" ----- 終端のスペースを明示 -----
+augroup TrailingSpaces
+  autocmd!
+
+  " Trailing spaces
+  autocmd VimEnter,ColorScheme * highlight TrailingSpaces ctermbg=red
+  autocmd Syntax * syntax match TrailingSpaces containedin=ALL /\s\+$/
+  autocmd FileType unite syntax clear TrailingSpaces
+augroup END
+
+
 " ----- cursor line -----
 set cursorline
 " カレントウィンドウにのみ下線を引く
