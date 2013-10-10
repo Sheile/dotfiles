@@ -88,7 +88,7 @@ cnoremap <expr> / getcmdtype() == '/' ? '\/' : '/'
 cnoremap <expr> ? getcmdtype() == '?' ? '\?' : '?'
 
 " ESCでハイライト解除
-nnoremap <esc> :noh<return><esc>
+nnoremap <ESC><ESC> :noh<return><ESC>
 
 " ----- backup -----
 set backup
