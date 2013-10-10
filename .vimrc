@@ -19,6 +19,7 @@ NeoBundle 'hrp/EnhancedCommentify'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'thinca/vim-ref'
+NeoBundle 'kana/vim-smartinput'
 
 NeoBundle 'Shougo/vimproc', {
   \ 'build' : {
