@@ -1,0 +1,13 @@
+snippet jasmine-describe
+alias desc
+options head
+  describe("${1:#:target}", function() {
+    ${2:#:body}
+  });
+
+snippet jasmine-it
+alias it
+options head
+  it("${1:#:expect}", function() {
+    ${2:#:body}
+  });
