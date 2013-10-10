@@ -33,6 +33,9 @@ NeoBundle 'Shougo/vimproc', {
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'jelera/vim-javascript-syntax'
 NeoBundle 'teramako/jscomplete-vim'
+NeoBundle 'jiangmiao/simple-javascript-indenter'
+let g:SimpleJsIndenter_BriefMode = 1
+let g:SimpleJsIndenter_CaseIndentLevel = -1
 
 NeoBundleCheck
 
@@ -60,6 +63,7 @@ set cindent         " smartindentよりも優秀
 set tabstop=2
 set shiftwidth=2
 set expandtab
+filetype plugin indent on
 
 " ----- edit -----
 set showmatch
