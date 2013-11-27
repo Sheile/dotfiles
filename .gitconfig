@@ -37,3 +37,7 @@
   name = Sheile
 [url "https://"]
 	insteadOf = git://
+[pager]
+  log = diff-highlight | less
+  show = diff-highlight | less
+  diff = diff-highlight | less
