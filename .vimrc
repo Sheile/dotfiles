@@ -1,5 +1,7 @@
 scriptencoding utf-8
 
+let mapleader = " "
+
 " ----- pluginのインストール -----
 set nocompatible
 filetype off
@@ -259,24 +261,21 @@ autocmd User Rails Rnavcommand fabricator spec/fabricators -suffix=_fabricator.r
 " 入力モードで開始する
 let g:unite_enable_start_insert = 1
 
-nnoremap    [unite]   <Nop>
-nmap    f [unite]
-
 " 分割しないでuniteのbufferを表示する
-nnoremap [unite]u  :<C-u>Unite -no-split<Space>
+nnoremap <Leader>u  :<C-u>Unite -no-split<Space>
 
 " 全部乗せ
-nnoremap <silent> [unite]a  :<C-u>UniteWithCurrentDir -no-split -buffer-name=files buffer file_mru bookmark file<CR>
+nnoremap <silent> <Leader>a  :<C-u>UniteWithCurrentDir -no-split -buffer-name=files buffer file_mru bookmark file<CR>
 " ファイル一覧
-nnoremap <silent> [unite]f  :<C-u>Unite -no-split -buffer-name=files file<CR>
+nnoremap <silent> <Leader>f  :<C-u>Unite -no-split -buffer-name=files file<CR>
 " バッファ一覧
-nnoremap <silent> [unite]j  :<C-u>Unite -no-split buffer<CR>
+nnoremap <silent> <Leader>j  :<C-u>Unite -no-split buffer<CR>
 " 常用セット
-nnoremap <silent> [unite]u  :<C-u>Unite -no-split buffer file_mru<CR>
+nnoremap <silent> <Leader>u  :<C-u>Unite -no-split buffer file_mru<CR>
 " 最近使用したファイル一覧
-nnoremap <silent> [unite]m  :<C-u>Unite -no-split file_mru<CR>
+nnoremap <silent> <Leader>m  :<C-u>Unite -no-split file_mru<CR>
 " 現在のバッファのカレントディレクトリからファイル一覧
-nnoremap <silent> [unite]d  :<C-u>UniteWithBufferDir -no-split file<CR>
+nnoremap <silent> <Leader>d  :<C-u>UniteWithBufferDir -no-split file<CR>
 
 " Ctrl + JはESCとする
 au FileType unite inoremap <silent> <buffer> <C-j> <ESC>
