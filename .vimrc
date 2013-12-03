@@ -289,6 +289,11 @@ au FileType unite set nopaste
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
+""" hrp/EnhancedCommentify
+""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:EnhCommentifyBindInInsert = "no"
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
 """ jscomplete-vim.vim
 """"""""""""""""""""""""""""""""""""""""""""""""""
 au FileType javascript :setl omnifunc=jscomplete#CompleteJS
