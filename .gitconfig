@@ -41,3 +41,7 @@
   log = diff-highlight | LESS='-R --quit-if-one-screen' less
   show = diff-highlight | LESS=-R less
   diff = diff-highlight | LESS=-R less
+[merge]
+	ff = false
+[pull]
+	rebase = true
