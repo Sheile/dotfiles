@@ -1,6 +1,8 @@
-# Lines configured by zsh-newuser-install
+# cd関連
 setopt autocd
 setopt auto_pushd
+setopt pushd_ignore_dups
+alias b='cd ..'
 
 # 補完関連
 unsetopt auto_menu
@@ -29,7 +31,7 @@ alias crontab='crontab -i'
 alias jq='jq . -C'
 alias less='less -R'
 alias la='ls -la'
-alias b='cd ..'
+alias diff='colordiff -u'
 
 # show filelist when change directory.
 chpwd() {
