@@ -80,3 +80,14 @@ function do_enter() {
 }
 zle -N do_enter
 bindkey '^m' do_enter
+
+# promptにgitのbranchとstatusを表示
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' formats '[%b]'
+zstyle ':vcs_info:*' actionformats '[%b|%a]'
+precmd() {
+    psvar=()
+    LANG=en_US.UTF-8 vcs_info
+    psvar[1]=$vcs_info_msg_0_
+}
+PROMPT="[%n@%m]%~ %2F%1v%f%(!,#,%%) "
