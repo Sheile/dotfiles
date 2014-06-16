@@ -23,6 +23,7 @@ NeoBundle 'tpope/vim-rails'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'thinca/vim-ref'
 NeoBundle 'kana/vim-smartinput'
+NeoBundle 'rhysd/clever-f.vim'
 
 NeoBundle 'Shougo/vimproc', {
   \ 'build' : {
@@ -299,3 +300,8 @@ let g:EnhCommentifyBindInInsert = "no"
 """"""""""""""""""""""""""""""""""""""""""""""""""
 au FileType javascript :setl omnifunc=jscomplete#CompleteJS
 let g:jscomplete_use = ['dom', 'moz']
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
+""" rhysd/clever-f.vim
+""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:clever_f_smart_case = 1
