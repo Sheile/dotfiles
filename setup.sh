@@ -26,3 +26,7 @@ ln -Fs "$PWD/neobundle.vim" "$HOME/.vim/bundle/neobundle.vim"
 # vim用のcolor schemeへのリンク作成
 mkdir -p ~/.vim/colors
 ln -Fs "$PWD/desert256.vim/colors/desert256.vim" "$HOME/.vim/colors/desert256.vim"
+
+# ~/binを作成して必要なスクリプトを配置
+mkdir ~/bin
+ln -Fs "$PWD/git/contrib/diff-highlight/diff-highlight" "$HOME/bin/"
