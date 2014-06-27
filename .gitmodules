@@ -6,3 +6,6 @@
 	path = desert256.vim
 	url = https://github.com/vim-scripts/desert256.vim.git
 	branch = master
+[submodule "git"]
+	path = git
+	url = https://github.com/git/git.git
