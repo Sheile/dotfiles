@@ -19,6 +19,7 @@ export LANG=ja_JP.utf8
 export LD_LIBRARY_PATH=/usr/local/lib:/usr/lib:/lib
 
 export GREP_OPTIONS='--color=auto'
+export PATH=$HOME/bin:$PATH
 
 # Aliases
 alias vi='vim'
