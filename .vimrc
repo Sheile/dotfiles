@@ -9,9 +9,10 @@ filetype off
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim
 endif
-call neobundle#rc(expand('~/.vim/bundle'))
 
 " Let NeoBundle manage NeoBundle
+call neobundle#begin(expand('~/.vim/bundle'))
+
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'Shougo/neocomplcache'
@@ -39,6 +40,9 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'jelera/vim-javascript-syntax'
 NeoBundle 'teramako/jscomplete-vim'
 NeoBundle 'jiangmiao/simple-javascript-indenter'
+
+call neobundle#end()
+
 let g:SimpleJsIndenter_BriefMode = 1
 let g:SimpleJsIndenter_CaseIndentLevel = -1
 
