@@ -42,16 +42,14 @@ NeoBundle 'jiangmiao/simple-javascript-indenter'
 
 call neobundle#end()
 
+NeoBundleCheck
+
 let g:SimpleJsIndenter_BriefMode = 1
 let g:SimpleJsIndenter_CaseIndentLevel = -1
-
-NeoBundleCheck
 
 " ----- key customize -----
 map gb `.zz
 map <c-g> g;
-
-" ----- cursor move -----
 
 " ----- cursor move in input mode -----
 inoremap <C-a> <Home>
@@ -63,7 +61,6 @@ syntax on
 set number
 set ruler
 set showcmd
-"set laststatus=2
 
 " ----- indent -----
 set autoindent
@@ -105,9 +102,6 @@ set swapfile
 set directory=~/.vim/swap
 
 " ----- Shortcut -----
-map <F2> <ESC>:bp<CR>
-map <F3> <ESC>:bn<CR>
-map <F4> <ESC>:bw<CR>
 nnoremap j gj
 nnoremap k gk
 
