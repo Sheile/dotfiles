@@ -30,3 +30,11 @@ ln -fs "$PWD/desert256.vim/colors/desert256.vim" "$HOME/.vim/colors/desert256.vi
 # ~/binを作成して必要なスクリプトを配置
 mkdir ~/bin
 ln -fs "$PWD/git/contrib/diff-highlight/diff-highlight" "$HOME/bin/"
+
+# zshによるgit関連の補完設定
+mkdir -p ~/.zsh/completion
+wget -q -O ~/.zsh/completion/git-completion.bash https://raw.github.com/git/git/master/contrib/completion/git-completion.bash
+wget -q -O ~/.zsh/completion/_git https://raw.github.com/git/git/master/contrib/completion/git-completion.zsh
+autoload -U compinit
+rm -f ~/.zcompdump; compinit
+echo "[NOTICE] Please restart shell to apply completion for git"
