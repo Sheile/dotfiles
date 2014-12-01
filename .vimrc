@@ -38,7 +38,6 @@ NeoBundle 'Shougo/vimproc', {
 " ----- js関連 -----
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'jelera/vim-javascript-syntax'
-NeoBundle 'teramako/jscomplete-vim'
 NeoBundle 'jiangmiao/simple-javascript-indenter'
 
 call neobundle#end()
@@ -298,12 +297,6 @@ au FileType unite set nopaste
 """ hrp/EnhancedCommentify
 """"""""""""""""""""""""""""""""""""""""""""""""""
 let g:EnhCommentifyBindInInsert = "no"
-
-""""""""""""""""""""""""""""""""""""""""""""""""""
-""" jscomplete-vim.vim
-""""""""""""""""""""""""""""""""""""""""""""""""""
-au FileType javascript :setl omnifunc=jscomplete#CompleteJS
-let g:jscomplete_use = ['dom', 'moz']
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 """ rhysd/clever-f.vim
