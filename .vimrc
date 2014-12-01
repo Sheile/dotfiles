@@ -25,6 +25,8 @@ NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'thinca/vim-ref'
 NeoBundle 'kana/vim-smartinput'
 NeoBundle 'rhysd/clever-f.vim'
+NeoBundle 'kana/vim-textobj-user'
+NeoBundle 'rhysd/vim-textobj-ruby'
 
 NeoBundle 'Shougo/vimproc', {
   \ 'build' : {
