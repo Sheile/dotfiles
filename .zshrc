@@ -1,3 +1,5 @@
+bindkey -e
+
 # cd関連
 setopt autocd
 setopt auto_pushd
@@ -7,7 +9,6 @@ alias b='cd ..'
 # 補完関連
 unsetopt auto_menu
 
-bindkey -e
 fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit
 compinit -u
