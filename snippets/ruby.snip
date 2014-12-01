@@ -1,0 +1,23 @@
+snippet rspec-describe
+alias desc
+options head
+  describe '${1:#:target}' do
+    ${2:#:body}
+  end
+
+snippet rspec-it
+alias it
+options head
+  it '${1:#:expect}' do
+    ${2:#:body}
+  end
+
+snippet rspec-expect
+alias expect
+options head
+  expect(${1:#:target}).to ${2:#:expect}
+
+snippet binding-pry
+alias bp
+options head
+  binding.pry
