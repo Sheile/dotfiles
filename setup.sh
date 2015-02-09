@@ -18,25 +18,25 @@ done
 git submodule update --init
 
 # vim用にbackup/swap/bundleディレクトリ作成
-mkdir -p ~/.vim/backup
-mkdir -p ~/.vim/swap
-mkdir -p ~/.vim/bundle
+mkdir -p $HOME/.vim/backup
+mkdir -p $HOME/.vim/swap
+mkdir -p $HOME/.vim/bundle
 
 # NeoBundleへのリンク作成
 ln -fs "$PWD/neobundle.vim" "$HOME/.vim/bundle/neobundle.vim"
 
 # vim用のcolor schemeへのリンク作成
-mkdir -p ~/.vim/colors
+mkdir -p $HOME/.vim/colors
 ln -fs "$PWD/desert256.vim/colors/desert256.vim" "$HOME/.vim/colors/desert256.vim"
 
-# ~/binを作成して必要なスクリプトを配置
-mkdir -p ~/bin
+# $HOME/binを作成して必要なスクリプトを配置
+mkdir -p $HOME/bin
 ln -fs "$PWD/git/contrib/diff-highlight/diff-highlight" "$HOME/bin/"
 
 # zshによるgit関連の補完設定
-mkdir -p ~/.zsh/completion
-wget -q -O ~/.zsh/completion/git-completion.bash https://raw.github.com/git/git/master/contrib/completion/git-completion.bash
-wget -q -O ~/.zsh/completion/_git https://raw.github.com/git/git/master/contrib/completion/git-completion.zsh
+mkdir -p $HOME/.zsh/completion
+wget -q -O $HOME/.zsh/completion/git-completion.bash https://raw.github.com/git/git/master/contrib/completion/git-completion.bash
+wget -q -O $HOME/.zsh/completion/_git https://raw.github.com/git/git/master/contrib/completion/git-completion.zsh
 autoload -U compinit
-rm -f ~/.zcompdump; compinit
+rm -f $HOME/.zcompdump; compinit
 echo "[NOTICE] Please restart shell to apply completion for git"
