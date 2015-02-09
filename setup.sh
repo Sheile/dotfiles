@@ -30,7 +30,7 @@ mkdir -p ~/.vim/colors
 ln -fs "$PWD/desert256.vim/colors/desert256.vim" "$HOME/.vim/colors/desert256.vim"
 
 # ~/binを作成して必要なスクリプトを配置
-mkdir ~/bin
+mkdir -p ~/bin
 ln -fs "$PWD/git/contrib/diff-highlight/diff-highlight" "$HOME/bin/"
 
 # zshによるgit関連の補完設定
