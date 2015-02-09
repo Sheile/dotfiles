@@ -1,5 +1,7 @@
 #!/bin/env zsh
 
+set -eu
+
 cd $(dirname $0)
 [ ! -d backup ] && mkdir backup
 
