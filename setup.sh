@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/env zsh
 
 cd $(dirname $0)
 [ ! -d backup ] && mkdir backup
