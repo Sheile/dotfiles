@@ -12,10 +12,39 @@ options head
     ${2:#:body}
   end
 
-snippet rspec-expect
+snippet spec-before
+alias before
+options head
+  before do
+    ${1:#body}
+  end
+
+snippet spec-after
+alias after
+options head
+  after do
+    ${1:#body}
+  end
+
+snippet rspec-allow
+alias allow
+options head
+  allow(${1:#:body}).to receive(${2:#:message})
+
+snippet rspec-allow-any-instances
+alias allowall
+options head
+  allow_any_instance_of(${1:#:body}).to receive(${2:#:message})
+
+snippet rspec-expect-receive
 alias expect
 options head
-  expect(${1:#:target}).to ${2:#:expect}
+  expect(${1:#:body}).to receive(${2:#:message})
+
+snippet rspec-expect-any-instances
+alias expectall
+options head
+  expect_any_instance_of(${1:#:body}).to receive(${2:#:message})
 
 snippet binding-pry
 alias bp
