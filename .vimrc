@@ -27,6 +27,7 @@ NeoBundle 'kana/vim-smartinput'
 NeoBundle 'rhysd/clever-f.vim'
 NeoBundle 'kana/vim-textobj-user'
 NeoBundle 'rhysd/vim-textobj-ruby'
+NeoBundle 'rking/ag.vim'
 
 NeoBundle 'Shougo/vimproc', {
   \ 'build' : {
@@ -299,3 +300,20 @@ let g:EnhCommentifyBindInInsert = "no"
 """ rhysd/clever-f.vim
 """"""""""""""""""""""""""""""""""""""""""""""""""
 let g:clever_f_smart_case = 1
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
+""" rking/ag.vim
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" カーソル位置の単語をgrep検索
+nnoremap <silent> + :<C-u>Unite grep:. -no-split -buffer-name=search-buffer<CR><C-R><C-W><CR>
+" 指定した単語をgrep検索
+nnoremap <silent> <Leader>/ :<C-u>Unite grep:. -no-split -buffer-name=search-buffer<CR>
+" 検索結果の再呼び出し
+nnoremap <silent> <Leader>r  :<C-u>UniteResume search-buffer<CR>
+
+" unite grep に ag(The Silver Searcher) を使う
+if executable('ag')
+  let g:unite_source_grep_command = 'ag'
+  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
+  let g:unite_source_grep_recursive_opt = ''
+endif
