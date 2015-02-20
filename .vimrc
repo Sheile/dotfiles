@@ -53,6 +53,7 @@ let g:SimpleJsIndenter_CaseIndentLevel = -1
 " ----- key customize -----
 map gb `.zz
 map <c-g> g;
+autocmd InsertLeave * set nopaste
 
 " ----- cursor move in input mode -----
 inoremap <C-a> <Home>
