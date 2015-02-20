@@ -63,6 +63,7 @@ syntax on
 set number
 set ruler
 set showcmd
+set laststatus=2
 
 " ----- indent -----
 set autoindent
