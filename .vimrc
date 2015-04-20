@@ -110,6 +110,8 @@ set directory=~/.vim/swap
 " ----- Shortcut -----
 nnoremap j gj
 nnoremap k gk
+vnoremap j gj
+vnoremap k gk
 
 " 拡張子毎のSyntax highlightを適用
 autocmd BufNewFile,BufRead *.scss set filetype=css
