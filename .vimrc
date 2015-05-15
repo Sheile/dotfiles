@@ -3,7 +3,6 @@ scriptencoding utf-8
 let g:mapleader = " "
 
 " ----- pluginのインストール -----
-set nocompatible
 filetype off
 
 if has('vim_starting')
