@@ -47,3 +47,5 @@
 	ff = false
 [pull]
 	rebase = true
+[fetch]
+	prune = true
