@@ -1,5 +1,8 @@
 bindkey -e
 
+# Load Plugins
+source ~/.zsh/antigenrc
+
 setopt ignore_eof
 setopt interactive_comments
 
@@ -12,7 +15,7 @@ alias b='cd ..'
 # 補完関連
 unsetopt auto_menu
 
-fpath=(~/.zsh/zsh-completions/src ~/.zsh/completions $fpath)
+fpath=(~/.zsh/completions $fpath)
 autoload -Uz compinit
 compinit -u
 
