@@ -12,7 +12,7 @@ alias b='cd ..'
 # 補完関連
 unsetopt auto_menu
 
-fpath=(~/.zsh/completion $fpath)
+fpath=(~/.zsh/zsh-completions/src ~/.zsh/completions $fpath)
 autoload -Uz compinit
 compinit -u
 

@@ -33,10 +33,18 @@ ln -fs "$PWD/desert256.vim/colors/desert256.vim" "$HOME/.vim/colors/desert256.vi
 mkdir -p $HOME/bin
 ln -fs "$PWD/git/contrib/diff-highlight/diff-highlight" "$HOME/bin/"
 
-# zshによるgit関連の補完設定
-mkdir -p $HOME/.zsh/completion
-wget -q -O $HOME/.zsh/completion/git-completion.bash https://raw.github.com/git/git/master/contrib/completion/git-completion.bash
-wget -q -O $HOME/.zsh/completion/_git https://raw.github.com/git/git/master/contrib/completion/git-completion.zsh
+# zsh-completionsによる補完設定
+mkdir -p $HOME/.zsh
+cd $HOME/.zsh
+if [ ! -d $HOME/.zsh/zsh-completions ]; then
+  git clone https://github.com/zsh-users/zsh-completions.git
+fi
+
+# git公式による補完設定
+mkdir -p $HOME/.zsh/completions
+wget -q -O $HOME/.zsh/completions/git-completion.bash https://raw.github.com/git/git/master/contrib/completion/git-completion.bash
+wget -q -O $HOME/.zsh/completions/_git https://raw.github.com/git/git/master/contrib/completion/git-completion.zsh
+
 autoload -U compinit
 rm -f $HOME/.zcompdump; compinit
 echo "[NOTICE] Please restart shell to apply completion for git"
