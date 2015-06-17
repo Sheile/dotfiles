@@ -1,6 +1,7 @@
 bindkey -e
 
 setopt ignore_eof
+setopt interactive_comments
 
 # cd関連
 setopt autocd
