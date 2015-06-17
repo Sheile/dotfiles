@@ -1,5 +1,7 @@
 bindkey -e
 
+setopt ignore_eof
+
 # cd関連
 setopt autocd
 setopt auto_pushd
