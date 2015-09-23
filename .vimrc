@@ -155,9 +155,6 @@ autocmd BufNewFile,BufRead *.jst.eco set filetype=html
 set t_Co=256
 colorscheme desert256
 
-" Uniteの選択行が黒背景になるので修正
-hi PmenuSel ctermfg=0 ctermbg=7 guibg=Grey
-
 " ----- mouse -----
 set mouse=a
 
@@ -343,7 +340,13 @@ autocmd User Rails Rnavcommand fabricator spec/fabricators -suffix=_fabricator.r
 """ unite.vim
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " 入力モードで開始する
-let g:unite_enable_start_insert = 1
+call unite#custom#profile('default', 'context', { 'unite-options-cursor-line-time': 100.0 })
+call unite#custom#profile('default', 'context', { 'start_insert': 1})
+
+" Uniteの選択行の見た目を変更
+highlight UniteCursorLine ctermfg=0 ctermbg=7 guibg=Grey
+autocmd BufEnter,BufWinEnter \[unite\]* highlight! link CursorLine UniteCursorLine
+autocmd BufLeave \[unite\]* highlight! link CursorLine NONE
 
 " 分割しないでuniteのbufferを表示する
 nnoremap <Leader>u  :<C-u>Unite -no-split<Space>
@@ -395,6 +398,6 @@ nnoremap <silent> <Leader>r  :<C-u>UniteResume search-buffer<CR>
 " unite grep に ag(The Silver Searcher) を使う
 if executable('ag')
   let g:unite_source_grep_command = 'ag'
-  let g:unite_source_grep_default_opts = '--smart-case --vimgrep'
+  let g:unite_source_grep_default_opts = '--smart-case --vimgrep --nocolor'
   let g:unite_source_grep_recursive_opt = ''
 endif
