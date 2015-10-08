@@ -2,6 +2,8 @@
 
 set -eu
 
+mkdir -p "$PWD/tmp"
+
 cd $(dirname $0)
 [ ! -d backup ] && mkdir backup
 
@@ -22,8 +24,10 @@ mkdir -p $HOME/.vim/backup
 mkdir -p $HOME/.vim/swap
 mkdir -p $HOME/.vim/bundle
 
-# NeoBundleへのリンク作成
-ln -fs "$PWD/neobundle.vim" "$HOME/.vim/bundle/neobundle.vim"
+# NeoBundleのインストール
+curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh > "$PWD/tmp/neobundle_install.sh"
+chmod a+x "$PWD/tmp/neobundle_install.sh"
+$PWD/tmp/neobundle_install.sh
 
 # vim用のcolor schemeへのリンク作成
 mkdir -p $HOME/.vim/colors
