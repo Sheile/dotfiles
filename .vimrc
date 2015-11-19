@@ -1,6 +1,6 @@
 scriptencoding utf-8
 
-let g:mapleader = " "
+let g:mapleader = ' '
 
 " ----- pluginのインストール -----
 filetype off
@@ -10,7 +10,7 @@ if has('vim_starting')
 endif
 
 " Let NeoBundle manage NeoBundle
-call neobundle#begin(expand('~/.vim/bundle'))
+call g:neobundle#begin(expand('~/.vim/bundle'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
@@ -44,9 +44,14 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'jelera/vim-javascript-syntax'
 NeoBundle 'jiangmiao/simple-javascript-indenter'
 
-call neobundle#end()
+call g:neobundle#end()
 
 NeoBundleCheck
+
+" ----- Clear autocmd to suppress duplicated autocmd when load .vimrc multiple times -----
+augroup vimrc
+  autocmd!
+augroup END
 
 let g:SimpleJsIndenter_BriefMode = 1
 let g:SimpleJsIndenter_CaseIndentLevel = -1
@@ -54,7 +59,7 @@ let g:SimpleJsIndenter_CaseIndentLevel = -1
 " ----- key customize -----
 map gb `.zz
 map <c-g> g;
-autocmd InsertLeave * set nopaste
+autocmd vimrc InsertLeave * set nopaste
 
 " ----- cursor move in input mode -----
 inoremap <C-a> <Home>
@@ -146,11 +151,11 @@ vnoremap j gj
 vnoremap k gk
 
 " 拡張子毎のSyntax highlightを適用
-autocmd BufNewFile,BufRead *.scss set filetype=css
-autocmd BufNewFile,BufRead *.coffee.js set filetype=coffee
-autocmd BufNewFile,BufRead *.jst set filetype=html
-autocmd BufNewFile,BufRead *.jst.ejs set filetype=html
-autocmd BufNewFile,BufRead *.jst.eco set filetype=html
+autocmd vimrc BufNewFile,BufRead *.scss set filetype=css
+autocmd vimrc BufNewFile,BufRead *.coffee.js set filetype=coffee
+autocmd vimrc BufNewFile,BufRead *.jst set filetype=html
+autocmd vimrc BufNewFile,BufRead *.jst.ejs set filetype=html
+autocmd vimrc BufNewFile,BufRead *.jst.eco set filetype=html
 
 " ----- color scheme -----
 set t_Co=256
@@ -280,11 +285,11 @@ inoremap <expr><C-y>  neocomplete#close_popup()
 inoremap <expr><C-e>  neocomplete#cancel_popup()
 
 " Enable omni completion.
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd vimrc FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd vimrc FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd vimrc FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd vimrc FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd vimrc FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " Enable heavy omni completion.
 if !exists('g:neocomplete#sources#omni#input_patterns')
@@ -334,20 +339,20 @@ let g:neosnippet#snippets_directory='~/dotfiles/snippets'
 """"""""""""""""""""""""""""""""""""""""""""""""""
 """ rails.vim
 """"""""""""""""""""""""""""""""""""""""""""""""""
-autocmd User Rails Rnavcommand fabricator spec/fabricators -suffix=_fabricator.rb -default=controller()
+autocmd vimrc User Rails Rnavcommand fabricator spec/fabricators -suffix=_fabricator.rb -default=controller()
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 """ unite.vim
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " 入力モードで開始する
-call unite#custom#profile('default', 'context', { 'unite-options-cursor-line-time': 100.0 })
-call unite#custom#profile('default', 'context', { 'start_insert': 1})
+call g:unite#custom#profile('default', 'context', { 'options_cursor_line_time': 100.0 })
+call g:unite#custom#profile('default', 'context', { 'start_insert': 1 })
 
 " Uniteの選択行の見た目を変更
 highlight UniteCursorLine ctermfg=0 ctermbg=7 guibg=Grey
-autocmd BufEnter,BufWinEnter \[unite\]* highlight! link CursorLine UniteCursorLine
-autocmd BufLeave \[unite\]* highlight! link CursorLine NONE
+autocmd vimrc BufEnter,BufWinEnter \[unite\]* highlight! link CursorLine UniteCursorLine
+autocmd vimrc BufLeave \[unite\]* highlight! link CursorLine NONE
 
 " 分割しないでuniteのbufferを表示する
 nnoremap <Leader>u  :<C-u>Unite -no-split<Space>
@@ -366,20 +371,20 @@ nnoremap <silent> <Leader>m  :<C-u>Unite -no-split file_mru<CR>
 nnoremap <silent> <Leader>d  :<C-u>UniteWithBufferDir -no-split file<CR>
 
 " Ctrl + JはESCとする
-au FileType unite inoremap <silent> <buffer> <C-j> <ESC>
+autocmd vimrc FileType unite inoremap <silent> <buffer> <C-j> <ESC>
 
 " ESCキーで終了する
-au FileType unite nmap <silent> <buffer> <C-j> <Plug>(unite_exit)
-au FileType unite nmap <silent> <buffer> <ESC> <Plug>(unite_exit)
+autocmd vimrc FileType unite nmap <silent> <buffer> <C-j> <Plug>(unite_exit)
+autocmd vimrc FileType unite nmap <silent> <buffer> <ESC> <Plug>(unite_exit)
 
 " Uniteに入る際はpasteモードをOFFにする
-au FileType unite set nopaste
+autocmd vimrc FileType unite set nopaste
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 """ hrp/EnhancedCommentify
 """"""""""""""""""""""""""""""""""""""""""""""""""
-let g:EnhCommentifyBindInInsert = "no"
+let g:EnhCommentifyBindInInsert = 'no'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 """ rhysd/clever-f.vim
