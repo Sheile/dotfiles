@@ -26,6 +26,7 @@ NeoBundle 'kana/vim-smartinput'
 NeoBundle 'rhysd/clever-f.vim'
 NeoBundle 'kana/vim-textobj-user'
 NeoBundle 'rhysd/vim-textobj-ruby'
+NeoBundle 'tpope/vim-surround'
 NeoBundle 'rking/ag.vim'
 
 NeoBundle 'Shougo/vimproc.vim', {
