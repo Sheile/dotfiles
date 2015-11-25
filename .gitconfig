@@ -38,16 +38,16 @@
   email = sheile1024@gmail.com
   name = Sheile
 [url "https://"]
-	insteadOf = git://
+  insteadOf = git://
 [pager]
   log = diff-highlight | LESS='-R --quit-if-one-screen' less
   show = diff-highlight | LESS=-R less
   diff = diff-highlight | LESS=-R less
 [merge]
-	ff = false
+  ff = false
 [pull]
-	rebase = true
+  rebase = true
 [fetch]
-	prune = true
+  prune = true
 [rebase]
   autostash = true
