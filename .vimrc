@@ -18,6 +18,7 @@ NeoBundle 'Shougo/neocomplete'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'tyru/caw.vim'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'thinca/vim-ref'
@@ -389,6 +390,12 @@ autocmd vimrc FileType unite nmap <silent> <buffer> <ESC> <Plug>(unite_exit)
 " Uniteに入る際はpasteモードをOFFにする
 autocmd vimrc FileType unite set nopaste
 
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
+""" tyru/caw.vim
+""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <Leader>c <Plug>(caw:i:toggle)
+vmap <Leader>c <Plug>(caw:i:toggle)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 """ rhysd/clever-f.vim
