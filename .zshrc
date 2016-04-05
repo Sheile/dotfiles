@@ -94,16 +94,3 @@ precmd() {
     psvar[1]=$vcs_info_msg_0_
 }
 PROMPT="[%n@%m]%~ %2F%1v%f%(!,#,%%) "
-
-# Display root node when run the jq without argument
-function jq() {
-  if [ ! -p /dev/stdin ]; then
-    return $(command jq)
-  fi
-
-  if [ -z "$1" ]; then
-    cat - | command jq -C .
-  else
-    cat - | command jq -C $1
-  fi
-}
