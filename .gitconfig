@@ -30,6 +30,7 @@
   psuh = push
   pus = push
   puh = push
+  pushf = push --force-with-lease
   pl = !git pull && git submodule update --init
   s = status --short --branch
   st = status -sb
