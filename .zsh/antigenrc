@@ -1,4 +1,5 @@
 source $(dirname $0)/antigen/antigen.zsh
+fpath=($HOME/.zsh/anyframe-custom(N-/) $fpath)
 
 antigen bundle zsh-users/zsh-completions
 antigen bundle mollifier/anyframe
@@ -18,3 +19,6 @@ bindkey '^i^k' anyframe-widget-kill
 
 bindkey '^if' anyframe-widget-insert-filename
 bindkey '^i^f' anyframe-widget-insert-filename
+
+alias rmc=anyframe-widget-remove-container
+alias rmci=anyframe-widget-remove-container-image

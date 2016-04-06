@@ -1,0 +1,4 @@
+docker ps -a \
+  | anyframe-selector-auto \
+  | awk '{print $1}' \
+  | anyframe-action-execute docker rm

@@ -1,0 +1,4 @@
+docker images \
+  | anyframe-selector-auto \
+  | awk '{print $3}' \
+  | anyframe-action-execute docker rmi
