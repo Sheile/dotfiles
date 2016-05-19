@@ -412,6 +412,8 @@ nnoremap <silent> + :<C-u>Unite grep:. -no-split -buffer-name=search-buffer<CR><
 nnoremap <silent> <Leader>/ :<C-u>Unite grep:. -no-split -buffer-name=search-buffer<CR>
 " 検索結果の再呼び出し
 nnoremap <silent> <Leader>r  :<C-u>UniteResume search-buffer<CR>
+" Jump specified line in current buffer
+nnoremap <silent> <Leader>l  :<C-u>Unite -no-split line<CR>
 
 " unite grep に ag(The Silver Searcher) を使う
 if executable('ag')
