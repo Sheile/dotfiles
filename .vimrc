@@ -28,6 +28,7 @@ NeoBundle 'kana/vim-textobj-user'
 NeoBundle 'rhysd/vim-textobj-ruby'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'rking/ag.vim'
+NeoBundle 'elzr/vim-json'
 
 NeoBundle 'Shougo/vimproc.vim', {
 \ 'build' : {
@@ -418,3 +419,6 @@ if executable('ag')
   let g:unite_source_grep_default_opts = '--smart-case --vimgrep --nocolor'
   let g:unite_source_grep_recursive_opt = ''
 endif
+
+" elzr/vim-json
+let g:vim_json_syntax_conceal = 0
