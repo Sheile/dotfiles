@@ -45,6 +45,15 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'jelera/vim-javascript-syntax'
 NeoBundle 'jiangmiao/simple-javascript-indenter'
 
+" ----- Python -----
+let $PATH = "~/.pyenv/shims:".$PATH
+NeoBundle "davidhalter/jedi-vim"
+NeoBundleLazy "lambdalisue/vim-pyenv", {
+\ "depends": ['davidhalter/jedi-vim'],
+\ "autoload": {
+\   "filetypes": ["python", "python3", "djangohtml"]
+\ }}
+
 call g:neobundle#end()
 
 NeoBundleCheck
@@ -424,3 +433,7 @@ endif
 
 " elzr/vim-json
 let g:vim_json_syntax_conceal = 0
+
+" davidhalter/jedi-vim
+autocmd vimrc FileType python setlocal completeopt-=preview
+let g:jedi#rename_command = "<leader>R"
