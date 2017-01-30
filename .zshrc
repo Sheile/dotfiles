@@ -98,3 +98,8 @@ PROMPT="[%n@%m]%~ %2F%1v%f%(!,#,%%) "
 # Append PATH to node
 export NODE_PATH=/opt/node
 export PATH=$PATH:$NODE_PATH/bin
+
+# Use pyenv
+export PYENV_ROOT=$HOME/.pyenv
+export PATH=$PYENV_ROOT/bin:$PATH
+eval "$(pyenv init -)"
