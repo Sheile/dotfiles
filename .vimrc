@@ -10,7 +10,7 @@ if has('vim_starting')
 endif
 
 " Let NeoBundle manage NeoBundle
-call g:neobundle#begin(expand('~/.vim/bundle'))
+call neobundle#begin(expand('~/.vim/bundle'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
@@ -54,7 +54,7 @@ NeoBundleLazy "lambdalisue/vim-pyenv", {
 \   "filetypes": ["python", "python3", "djangohtml"]
 \ }}
 
-call g:neobundle#end()
+call neobundle#end()
 
 NeoBundleCheck
 
