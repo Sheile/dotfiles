@@ -94,3 +94,7 @@ precmd() {
     psvar[1]=$vcs_info_msg_0_
 }
 PROMPT="[%n@%m]%~ %2F%1v%f%(!,#,%%) "
+
+# Append PATH to node
+export NODE_PATH=/opt/node
+export PATH=$PATH:$NODE_PATH/bin
