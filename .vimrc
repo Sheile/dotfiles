@@ -259,7 +259,7 @@ inoremap <expr><C-e>  neocomplete#cancel_popup()
 autocmd vimrc FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd vimrc FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd vimrc FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd vimrc FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd vimrc FileType python setlocal omnifunc=jedi#completions
 autocmd vimrc FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " Enable heavy omni completion.
@@ -269,6 +269,7 @@ endif
 let g:neocomplete#sources#omni#input_patterns.ruby = '[^. *\t]\.\h\w*\|\h\w*::'
 let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
 let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+let g:neocomplete#sources#omni#input_patterns.python = '\h\w*\|[^. \t]\.\w*'
 
 " 補完のショートカットキーをCtrl-Spaceに変更
 " http://stackoverflow.com/questions/510503/ctrlspace-for-omni-and-keyword-completion-in-vim
