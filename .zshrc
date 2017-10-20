@@ -34,6 +34,7 @@ alias irb='pry'
 alias crontab='crontab -i'
 alias less='less -R'
 alias la='ls -la'
+alias ll='ls -l'
 alias diff='colordiff -u'
 
 # show filelist when change directory.
