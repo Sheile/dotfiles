@@ -161,6 +161,7 @@ endfunction
 " ----- backup -----
 set backup
 set backupdir=~/.vim/backup
+set backupcopy=yes
 set swapfile
 set directory=~/.vim/swap
 
