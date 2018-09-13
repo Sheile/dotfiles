@@ -104,4 +104,6 @@ export PATH=$PATH:$NODE_PATH/bin
 # Use pyenv
 export PYENV_ROOT=$HOME/.pyenv
 export PATH=$PYENV_ROOT/bin:$PATH
-eval "$(pyenv init -)"
+if [ -f "$PYENV_ROOT/bin/pyenv" ]; then
+  eval "$(pyenv init -)"
+fi
