@@ -12,7 +12,6 @@ export LD_LIBRARY_PATH=/usr/local/lib:/usr/lib:/lib
 
 export HISTSIZE=10000
 export HISTCONTROL=ignoredups
-export GREP_OPTIONS='--color=auto'
 
 alias vi='vim'
 alias view='vim -R'
@@ -21,5 +20,6 @@ alias crontab='crontab -i'
 alias jq='jq . -C'
 alias less='less -R'
 alias sudo='sudo -E '
+alias grep='grep --color=auto'
 
 shopt -s checkjobs
