@@ -35,6 +35,7 @@
   s = status --short --branch
   st = status -sb
   tree = log --graph --pretty=oneline --decorate --date=short --abbrev-commit --branches
+  amc = am --show-current-patch
 [user]
   email = sheile1024@gmail.com
   name = Sheile
