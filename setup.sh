@@ -1,4 +1,4 @@
-#!env zsh
+#!/usr/bin/env zsh
 
 set -eu
 
