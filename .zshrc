@@ -109,3 +109,9 @@ if [ -f "$PYENV_ROOT/bin/pyenv" ]; then
   eval "$(pyenv init -)"
   eval "$(pyenv virtualenv-init -)"
 fi
+
+# Add alias for python3
+python --version 2>&1 | grep "Python 2" > /dev/null
+if [ $? -eq 0 ]; then
+  alias python=python3
+fi
