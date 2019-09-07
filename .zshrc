@@ -37,6 +37,7 @@ alias ls='ls --color=auto'
 alias la='ls -la'
 alias ll='ls -l'
 alias diff='colordiff -u'
+alias tailf='tail -f'
 
 # show filelist when change directory.
 chpwd() {
