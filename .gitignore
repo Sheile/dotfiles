@@ -7,3 +7,4 @@ backup
 .zsh/completions
 .agignore
 tmp
+.zsh/antigenrc.zwc
