@@ -66,6 +66,9 @@ augroup END
 let g:SimpleJsIndenter_BriefMode = 1
 let g:SimpleJsIndenter_CaseIndentLevel = -1
 
+" ----- general -----
+set visualbell t_vb=
+
 " ----- key customize -----
 map gb `.zz
 map <c-g> g;

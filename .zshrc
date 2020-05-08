@@ -5,6 +5,7 @@ source ~/.zsh/antigenrc
 
 setopt ignore_eof
 setopt interactive_comments
+setopt no_beep
 
 # cd関連
 setopt autocd
