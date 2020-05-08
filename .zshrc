@@ -42,7 +42,7 @@ alias tailf='tail -f'
 
 # show filelist when change directory.
 chpwd() {
-  ll
+  ls -l
 }
 
 # <C-s>/<C-q>による画面更新の停止機能を無効化
