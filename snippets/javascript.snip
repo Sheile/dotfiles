@@ -11,3 +11,8 @@ options head
   it('${1:#:expect}', () => {
     ${2:#:body}
   })
+
+snippet console-log
+alias cl
+options head
+  console.log($1)
