@@ -103,10 +103,8 @@ PROMPT="[%n@%m]%~ %2F%1v%f%(!,#,%%) "
 export NODE_PATH=/opt/node
 export PATH=$PATH:$NODE_PATH/bin
 
-# Use pyenv
-export PYENV_ROOT=$HOME/.pyenv
-export PATH=$PYENV_ROOT/bin:$PATH
-if [ -f "$PYENV_ROOT/bin/pyenv" ]; then
+# Load pyenv into the shell
+if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
   eval "$(pyenv virtualenv-init -)"
 fi
