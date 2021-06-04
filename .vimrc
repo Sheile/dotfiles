@@ -344,7 +344,7 @@ nnoremap <silent> <Leader>u  :<C-u>Unite -no-split buffer file_mru<CR>
 " 最近使用したファイル一覧
 nnoremap <silent> <Leader>m  :<C-u>Unite -no-split file_mru<CR>
 " 現在のバッファのカレントディレクトリからファイル一覧
-nnoremap <silent> <Leader>d  :<C-u>UniteWithBufferDir -no-split file<CR>
+nnoremap <silent> <Leader>D  :<C-u>UniteWithBufferDir -no-split file<CR>
 
 " Ctrl + JはESCとする
 autocmd vimrc FileType unite inoremap <silent> <buffer> <C-j> <ESC>
