@@ -322,8 +322,8 @@ autocmd vimrc User Rails Rnavcommand fabricator spec/fabricators -suffix=_fabric
 """ unite.vim
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " 入力モードで開始する
-call g:unite#custom#profile('default', 'context', { 'options_cursor_line_time': 100.0 })
-call g:unite#custom#profile('default', 'context', { 'start_insert': 1 })
+call unite#custom#profile('default', 'context', { 'options_cursor_line_time': 100.0 })
+call unite#custom#profile('default', 'context', { 'start_insert': 1 })
 
 " Uniteの選択行の見た目を変更
 highlight UniteCursorLine ctermfg=0 ctermbg=7 guibg=Grey
