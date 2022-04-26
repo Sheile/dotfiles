@@ -393,3 +393,19 @@ let g:vim_json_syntax_conceal = 0
 " davidhalter/jedi-vim
 autocmd vimrc FileType python setlocal completeopt-=preview
 let g:jedi#rename_command = "<leader>R"
+
+
+" 未保存のバッファを着色
+if exists('+colorcolumn')
+  highlight ColorColumn ctermbg=52 guibg=#5f0000
+  function! s:AlertModification()
+    if &modified
+      let &colorcolumn = join(range(1, 256), ',')
+    endif
+  endfunction
+  augroup AlertModification
+    au!
+    au WinLeave * call s:AlertModification()
+    au WinEnter * set colorcolumn=
+  augroup END
+endif
