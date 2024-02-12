@@ -19,20 +19,6 @@ done
 # submoduleの読み込み
 git submodule update --init
 
-# vim用にbackup/swap/bundleディレクトリ作成
-mkdir -p $HOME/.vim/backup
-mkdir -p $HOME/.vim/swap
-mkdir -p $HOME/.vim/bundle
-
-# NeoBundleのインストール
-curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh > "$PWD/tmp/neobundle_install.sh"
-chmod a+x "$PWD/tmp/neobundle_install.sh"
-$PWD/tmp/neobundle_install.sh
-
-# vim用のcolor schemeへのリンク作成
-mkdir -p $HOME/.vim/colors
-ln -fs "$PWD/desert256.vim/colors/desert256.vim" "$HOME/.vim/colors/desert256.vim"
-
 # $HOME/binを作成して必要なスクリプトを配置
 mkdir -p $HOME/bin
 ln -fs "$PWD/git/contrib/diff-highlight/diff-highlight" "$HOME/bin/"
