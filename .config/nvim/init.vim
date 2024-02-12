@@ -1,3 +1,5 @@
+let g:mapleader = ' '
+
 " --- Setup dein.vim ---
 let $CACHE = expand('~/.cache')
 if !($CACHE->isdirectory())
