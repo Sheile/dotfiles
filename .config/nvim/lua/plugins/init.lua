@@ -5,4 +5,5 @@ return {
       { '<Leader>c', '<Plug>(caw:hatpos:toggle)', mode = {'n', 'v'} }
     }
   },
+  'github/copilot.vim',
 }

@@ -8,3 +8,6 @@ backup
 .agignore
 tmp
 .zsh/antigenrc.zwc
+
+# credentials
+.config/github-copilot
