@@ -28,8 +28,6 @@ export LD_LIBRARY_PATH=/usr/local/lib:/usr/lib:/lib
 export PATH=$HOME/bin:$PATH
 
 # Aliases
-alias vi='vim'
-alias view='vim -R'
 alias irb='pry'
 alias crontab='crontab -i'
 alias less='less -R'
@@ -114,3 +112,10 @@ python --version 2>&1 | grep "Python 2" > /dev/null
 if [ $? -eq 0 ]; then
   alias python=python3
 fi
+
+# NeoVim
+alias vi='nvim'
+alias vim='nvim'
+alias view='nvim -R'
+
+export PATH=/opt/nvim/bin:$PATH
