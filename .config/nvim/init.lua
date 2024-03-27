@@ -31,7 +31,7 @@ vim.opt.expandtab = true
 -- search
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
-vim.keymap.set('n', '<Esc><Esc>', '<Cmd>noh<CR>')
+vim.keymap.set('n', '<Esc>', '<Cmd>noh<CR>')
 
 -- backup/swap/undofile
 vim.opt.backup = true
