@@ -11,7 +11,13 @@ return {
     lazy = false,
     priority = 1000,
     config = function()
-      require('nightfox').setup()
+      require('nightfox').setup({
+        groups = {
+          all = {
+            WinSeparator = { fg = 'fg3' },
+          }
+        }
+      })
       vim.cmd([[colorscheme nightfox]])
     end
   },
