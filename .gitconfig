@@ -6,7 +6,7 @@
 [core]
   excludesfile = ~/.gitignore
   pager = less -x2
-  editor = vim
+  editor = nvim
   quotepath = false
 [diff]
   algorithm = patience
