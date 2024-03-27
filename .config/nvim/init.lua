@@ -32,7 +32,7 @@ vim.opt.expandtab = true
 -- search
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
-vim.keymap.set('n', '<Esc><Esc>', '<Cmd>noh<CR>')
+vim.keymap.set('n', '<Esc>', '<Cmd>noh<CR>')
 vim.keymap.set('n', '/', '/\\v')
 vim.keymap.set('n', '?', '?\\v')
 vim.keymap.set('c', '/', switch_by_cmdtype('[/?]', '\\/', '/'), { expr = true })
