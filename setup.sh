@@ -23,6 +23,9 @@ git submodule update --init
 mkdir -p $HOME/bin
 ln -fs "$PWD/git/contrib/diff-highlight/diff-highlight" "$HOME/bin/"
 
+# Setup antigen to manage zsh plugins
+curl -L git.io/antigen > $HOME/.zsh/antigen.zsh
+
 # git公式による補完設定
 mkdir -p $HOME/.zsh/completions
 wget -q -O $HOME/.zsh/completions/git-completion.bash https://raw.github.com/git/git/master/contrib/completion/git-completion.bash
