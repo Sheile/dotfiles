@@ -1,3 +1,5 @@
+[init]
+  defaultBranch = master
 [color]
   diff = auto
   status = auto
@@ -8,14 +10,16 @@
   pager = less -x2
   editor = nvim
   quotepath = false
+[commit]
+  verbose = true
 [diff]
-  algorithm = patience
+  algorithm = histogram
 [push]
   default = current
 [alias]
   br = branch -a -v
   co = checkout
-  ci = commit -v
+  ci = commit
   d = diff
   di = diff
   dc = diff --cached
@@ -52,4 +56,9 @@
 [fetch]
   prune = true
 [rebase]
+  autosquash = true
   autostash = true
+[rerere]
+  enabled = true
+[help]
+  autocorrect = 10
