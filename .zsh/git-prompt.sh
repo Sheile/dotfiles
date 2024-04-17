@@ -275,13 +275,13 @@ __git_ps1_show_upstream ()
 		"") # no upstream
 			upstream="" ;;
 		"0	0") # equal to upstream
-			upstream="|u=" ;;
+			upstream="|%F{green}=%f" ;;
 		"0	"*) # ahead of upstream
-			upstream="|u+${count#0	}" ;;
+			upstream="|%F{green}+${count#0	}%f" ;;
 		*"	0") # behind upstream
-			upstream="|u-${count%	0}" ;;
+			upstream="|%F{red}-${count%	0}%f" ;;
 		*)	    # diverged from upstream
-			upstream="|u+${count#*	}-${count%	*}" ;;
+			upstream="|%F{green}+${count#*	}%F{red}-${count%	*}%f" ;;
 		esac
 		if [ -n "$count" ] && [ -n "$name" ]; then
 			__git_ps1_upstream_name=$(git rev-parse \
