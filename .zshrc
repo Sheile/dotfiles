@@ -34,7 +34,7 @@ alias less='less -R'
 alias ls='ls --color=auto'
 alias la='ls -la'
 alias ll='ls -l'
-alias diff='colordiff -u'
+alias diff='git diff --no-index'
 alias grep='grep --color=auto'
 alias tailf='tail -f'
 
