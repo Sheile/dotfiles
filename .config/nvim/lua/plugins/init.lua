@@ -39,4 +39,5 @@ return {
       vim.cmd([[colorscheme nightfox]])
     end
   },
+  'nvim-tree/nvim-web-devicons',
 }
