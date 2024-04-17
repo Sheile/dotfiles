@@ -26,10 +26,8 @@ ln -fs "$PWD/git/contrib/diff-highlight/diff-highlight" "$HOME/bin/"
 # Setup antigen to manage zsh plugins
 curl -L git.io/antigen > $HOME/.zsh/antigen.zsh
 
-# git公式による補完設定
+# Prepare directory for zsh completions
 mkdir -p $HOME/.zsh/completions
-wget -q -O $HOME/.zsh/completions/git-completion.bash https://raw.github.com/git/git/master/contrib/completion/git-completion.bash
-wget -q -O $HOME/.zsh/completions/_git https://raw.github.com/git/git/master/contrib/completion/git-completion.zsh
 
 autoload -U compinit
 rm -f $HOME/.zcompdump; compinit
