@@ -87,15 +87,10 @@ zle -N do_enter
 bindkey '^m' do_enter
 
 # promptにgitのbranchとstatusを表示
-autoload -Uz vcs_info
-zstyle ':vcs_info:*' formats '[%b]'
-zstyle ':vcs_info:*' actionformats '[%b|%a]'
-precmd() {
-    psvar=()
-    LANG=en_US.UTF-8 vcs_info
-    psvar[1]=$vcs_info_msg_0_
-}
-PROMPT="[%n@%m]%~ %2F%1v%f%(!,#,%%) "
+GIT_PS1_SHOWCOLORHINTS=true
+GIT_PS1_SHOWUPSTREAM=verbose
+source ~/.zsh/git-prompt.sh
+precmd () { __git_ps1 "[%n@%m]%~" "%% " " [%s]" }
 
 # Append PATH to node
 export NODE_PATH=/opt/node
