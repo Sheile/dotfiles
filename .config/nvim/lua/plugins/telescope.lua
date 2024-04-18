@@ -20,7 +20,8 @@ return {
       extensions = {
         file_browser = {
           hidden = true,
-          hide_parent_dir = true
+          hide_parent_dir = true,
+          prompt_path = true,
         }
       }
     },
