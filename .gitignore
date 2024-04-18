@@ -9,6 +9,8 @@ backup
 tmp
 .zsh/antigen.zsh
 .zsh/antigenrc.zwc
+.config/systemd/user/tmux.service
+.config/systemd/user/default.target.wants
 
 # credentials
 .config/github-copilot
