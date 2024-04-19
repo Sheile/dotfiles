@@ -39,5 +39,12 @@ return {
       vim.cmd([[colorscheme nightfox]])
     end
   },
+  {
+    'nvim-lualine/lualine.nvim',
+    opts = {
+      globalstatus = true,
+    },
+    dependencies = { 'nvim-tree/nvim-web-devicons' }
+  },
   'nvim-tree/nvim-web-devicons',
 }

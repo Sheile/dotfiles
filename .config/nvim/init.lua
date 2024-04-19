@@ -22,6 +22,7 @@ require('lazy').setup('plugins')
 vim.opt.number = true
 vim.opt.showmatch = true
 vim.opt.matchtime = 3
+vim.opt.laststatus = 3
 
 -- indent
 vim.opt.smartindent = true
