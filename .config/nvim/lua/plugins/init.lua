@@ -1,8 +1,15 @@
 return {
   {
-    'tyru/caw.vim',
+    'numToStr/Comment.nvim',
+    opts = {
+      mappings = {
+        basic = false,
+        extra = false
+      },
+    },
     keys = {
-      { '<Leader>c', '<Plug>(caw:hatpos:toggle)', mode = {'n', 'v'} }
+      { '<Leader>c', '<Plug>(comment_toggle_linewise_current)', mode = 'n' },
+      { '<Leader>c', '<Plug>(comment_toggle_linewise_visual)', mode = 'v' }
     }
   },
   'github/copilot.vim',
