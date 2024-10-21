@@ -35,6 +35,7 @@ vim.keymap.set('n', '<Esc>', '<Cmd>noh<CR>')
 
 -- backup/swap/undofile
 vim.opt.backup = true
+vim.opt.swapfile = false
 vim.opt.undofile = true
 vim.opt.backupdir = vim.fn.expand('~/.cache') .. '/nvim/backup'
 vim.opt.directory = vim.fn.expand('~/.cache') .. '/nvim/swap'
