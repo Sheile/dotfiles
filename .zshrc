@@ -30,7 +30,7 @@ export PATH=$HOME/bin:$PATH
 # Aliases
 alias irb='pry'
 alias crontab='crontab -i'
-alias less='less -R'
+alias less='less -R -i'
 alias ls='ls --color=auto'
 alias la='ls -la'
 alias ll='ls -l'
