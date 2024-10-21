@@ -3,7 +3,10 @@ return {
     'nvim-telescope/telescope.nvim', branch = '0.1.x',
     dependencies = { 'nvim-lua/plenary.nvim', 'nvim-treesitter/nvim-treesitter' },
     keys = {
-      { '<Leader>j', '<Cmd>Telescope buffers<CR>', mode = 'n' }
+      { '<Leader>j', '<Cmd>Telescope buffers<CR>', mode = 'n' },
+      { '<Leader>r', '<Cmd>Telescope resume<CR>', mode = 'n' },
+      { '<Leader>/', '<Cmd>Telescope live_grep<CR>', mode = 'n' },
+      { '+', '<Cmd>Telescope grep_string<CR>', mode = { 'n', 'v' } },
     },
     opts = {
       defaults = {
