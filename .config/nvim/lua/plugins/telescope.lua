@@ -22,6 +22,11 @@ return {
           n = { ['q'] = 'close' },
         }
       },
+      pickers = {
+        buffers = {
+          sort_mru = true,
+        }
+      },
       extensions = {
         file_browser = {
           hidden = true,
