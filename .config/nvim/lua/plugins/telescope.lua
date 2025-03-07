@@ -10,6 +10,8 @@ return {
     },
     opts = {
       defaults = {
+        generic_sorter = require('telescope.sorters').get_substr_matcher,
+        file_sorter = require('telescope.sorters').get_substr_matcher,
         sorting_strategy = 'ascending',
         layout_config = {
           horizontal = {
@@ -21,12 +23,6 @@ return {
         }
       },
       extensions = {
-        fzf = {
-          fuzzy = false,
-          override_generic_sorter = true,
-          override_file_sorter = true,
-          case_mode = 'smart_case',
-        },
         file_browser = {
           hidden = true,
           hide_parent_dir = true,
@@ -42,12 +38,5 @@ return {
       { '<Leader>f', '<Cmd>Telescope file_browser<CR>', mode = 'n' },
       { '<Leader>D', '<Cmd>Telescope file_browser path=%:p:h<CR>', mode = 'n' }
     }
-  },
-  {
-    'nvim-telescope/telescope-fzf-native.nvim',
-    build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release',
-    config = function ()
-      require('telescope').load_extension('fzf')
-    end
   },
 }
