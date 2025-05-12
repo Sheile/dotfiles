@@ -115,6 +115,9 @@ alias view='nvim -R'
 
 export PATH=/opt/nvim/bin:$PATH
 
+# Change window title
+echo -e "\033];$(whoami)@$(hostname)\007"
+
 # Save raw cmdline for tmux-resurrect
 if [[ -n "$TMUX_PLUGIN_MANAGER_PATH" ]]; then
   source $TMUX_PLUGIN_MANAGER_PATH/tmux-resurrect/scripts/helpers.sh
