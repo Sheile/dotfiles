@@ -23,4 +23,23 @@ return {
       }
     },
   },
+  {
+    'ray-x/lsp_signature.nvim',
+    event = 'InsertEnter',
+    config = function()
+      require('lsp_signature').setup({
+        hint_prefix = {
+          above = '↙ ',
+          current = '← ',
+          below = '↖ '
+        },
+      })
+      -- Explicitly set highlight which is defined in lsp_signature.
+      -- because LspAttach event was already emitted due to lazy load for lsp_signature.
+      vim.api.nvim_set_hl(0, 'LspSignatureActiveParameter', { link = 'Search' })
+    end,
+    keys = {
+      { '<C-k>', function() require('lsp_signature').toggle_float_win() end, mode = { 'i', 'n' } },
+    },
+  }
 }
