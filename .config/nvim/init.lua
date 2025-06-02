@@ -1,3 +1,5 @@
+require('helpers')
+
 vim.scriptencoding = 'utf-8'
 vim.g.mapleader = ' '
 
