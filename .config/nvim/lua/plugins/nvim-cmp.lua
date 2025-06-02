@@ -6,19 +6,30 @@ return {
       'hrsh7th/cmp-nvim-lsp',
       'hrsh7th/cmp-buffer',
       'hrsh7th/cmp-path',
+      'rafamadriz/friendly-snippets',
+      'L3MON4D3/LuaSnip',
+      'saadparwaiz1/cmp_luasnip',
     },
     config = function()
       local cmp = require('cmp')
+      local luasnip = require('luasnip')
+      require('luasnip.loaders.from_vscode').lazy_load()
 
       cmp.setup({
         matching = {
           disallow_fuzzy_matching = true,
           disallow_partial_matching = true,
         },
+        snippet = {
+          expand = function(args)
+            require('luasnip').lsp_expand(args.body)
+          end,
+        },
         sources = {
           { name = 'nvim_lsp' },
           { name = 'buffer' },
           { name = 'path', { trailing_slash = true } },
+          { name = 'luasnip' },
         },
         mapping = cmp.mapping.preset.insert({
           ['<C-u>'] = cmp.mapping.scroll_docs(-4),
@@ -35,7 +46,28 @@ return {
               fallback()
             end
           end),
-          ['<Tab>'] = cmp.mapping.confirm { select = true },
+
+          ['<Tab>'] = cmp.mapping(function(fallback)
+            if cmp.visible() then
+              if luasnip.expandable() then
+                  luasnip.expand()
+              else
+                  cmp.confirm({ select = true })
+              end
+            elseif luasnip.locally_jumpable(1) then
+              luasnip.jump(1)
+            else
+              fallback()
+            end
+          end, { 'i', 's' }),
+          ['<S-Tab>'] = cmp.mapping(function(fallback)
+            if luasnip.locally_jumpable(-1) then
+              luasnip.jump(-1)
+            else
+              fallback()
+            end
+          end, { 'i', 's' }),
+
           ['<CR>'] = cmp.mapping.confirm { select = true },
           ['<C-CR>'] = cmp.mapping.confirm { select = true },
           ['<NL>'] = cmp.mapping.confirm { select = true },  -- Ctrl + Enter in terminal

@@ -1,9 +1,12 @@
 {
   "Comment.nvim": { "branch": "master", "commit": "e30b7f2008e52442154b66f7c519bfd2f1e32acb" },
+  "LuaSnip": { "branch": "master", "commit": "faf3c94a44508cec1b961406d36cc65113ff3b98" },
   "cmp-buffer": { "branch": "main", "commit": "b74fab3656eea9de20a9b8116afa3cfc4ec09657" },
   "cmp-nvim-lsp": { "branch": "main", "commit": "a8912b88ce488f411177fc8aed358b04dc246d7b" },
   "cmp-path": { "branch": "main", "commit": "c6635aae33a50d6010bf1aa756ac2398a2d54c32" },
+  "cmp_luasnip": { "branch": "master", "commit": "98d9cb5c2c38532bd9bdb481067b20fea8f32e90" },
   "copilot.vim": { "branch": "release", "commit": "9484e35cf222e9360e05450622a884f95c662c4c" },
+  "friendly-snippets": { "branch": "main", "commit": "572f5660cf05f8cd8834e096d7b4c921ba18e175" },
   "lazy.nvim": { "branch": "main", "commit": "e888d5b64c34bc41f7ef2e8850a5e67e4b3e2731" },
   "lsp_signature.nvim": { "branch": "master", "commit": "a4e3c15dfdce8783c074539b1835edae75fa63d5" },
   "lualine.nvim": { "branch": "master", "commit": "0a5a66803c7407767b799067986b4dc3036e1983" },
