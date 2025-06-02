@@ -33,3 +33,20 @@ vim.api.nvim_create_autocmd({'InsertEnter'}, {
     end
   end
 })
+
+-- Highlight unsaved buffer
+vim.api.nvim_set_hl(0, 'UnsavedBuffer', { bg = '#5f0000' })
+vim.api.nvim_create_autocmd({'VimEnter', 'BufEnter', 'WinEnter'}, {
+  group = 'default',
+  callback = function()
+    vim.api.nvim_buf_set_option(0, 'winhighlight', '')
+  end
+})
+vim.api.nvim_create_autocmd({'WinLeave'}, {
+  group = 'default',
+  callback = function()
+    if vim.bo.modified then
+      vim.api.nvim_buf_set_option(0, 'winhighlight', 'Normal:UnsavedBuffer,CursorLine:UnsavedBuffer')
+    end
+  end
+})
