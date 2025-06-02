@@ -69,4 +69,11 @@ return {
     dependencies = { 'nvim-tree/nvim-web-devicons' }
   },
   'nvim-tree/nvim-web-devicons',
+  {
+    'rbtnn/vim-ambiwidth',
+    init = function()
+      -- Add △ to handle double width
+      vim.g.ambiwidth_add_list = {{0x00d7, 0x00d7, 2}, {0x25b3, 0x25b3, 2}}
+    end
+  },
 }
