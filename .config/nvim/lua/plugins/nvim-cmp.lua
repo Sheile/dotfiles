@@ -11,6 +11,10 @@ return {
       local cmp = require('cmp')
 
       cmp.setup({
+        matching = {
+          disallow_fuzzy_matching = true,
+          disallow_partial_matching = true,
+        },
         sources = {
           { name = 'nvim_lsp' },
           { name = 'buffer' },
