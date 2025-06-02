@@ -1,0 +1,21 @@
+{
+	"name": "original-snippets",
+	"contributes": {
+		"snippets": [
+			{
+				"language": [
+					"javascript",
+					"javascripttreact"
+				],
+				"path": "./javascript.json"
+			},
+			{
+				"language": [
+					"typescript",
+					"typescriptreact"
+				],
+				"path": "./typescript.json"
+			}
+		]
+	}
+}

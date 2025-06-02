@@ -1,0 +1,8 @@
+{
+	"Print to console": {
+    "prefix": "cl",
+		"body": [
+			"console.log($1)"
+		]
+	}
+}
