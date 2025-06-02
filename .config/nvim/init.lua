@@ -33,11 +33,7 @@ vim.keymap.set({'n', 'v'}, 'j', 'gj')
 vim.keymap.set({'n', 'v'}, 'k', 'gk')
 
 -- auto command
-vim.api.nvim_create_augroup( 'default', {} )
-vim.api.nvim_create_autocmd( 'InsertLeave', {
-  group = 'default',
-  callback = function() vim.opt.paste = false end
-})
+require('autocommand')
 
 -- plugins(lazy.nvim)
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
