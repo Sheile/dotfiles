@@ -5,6 +5,7 @@ return {
       { 'mason-org/mason.nvim', opts = {} },
       'neovim/nvim-lspconfig'
     },
+    lazy = false,
     opts = {
       ensure_installed = {
         -- 'bashls',
@@ -21,6 +22,11 @@ return {
         'ts_ls',
         -- 'yamlls',
       }
+    },
+    keys = {
+      { '<Leader>l', '<Plug>(lsp)', mode = 'n' },
+      { '<Plug>(lsp)f', vim.lsp.buf.format, mode = 'n' },
+      { '<Plug>(lsp)r', vim.lsp.buf.rename, mode = 'n' },
     },
   },
   {

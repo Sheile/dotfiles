@@ -7,6 +7,10 @@ return {
       { '<Leader>r', '<Cmd>Telescope resume<CR>', mode = 'n' },
       { '<Leader>/', '<Cmd>Telescope live_grep<CR>', mode = 'n' },
       { '+', '<Cmd>Telescope grep_string<CR>', mode = { 'n', 'v' } },
+      { '<Plug>(lsp)e', '<Cmd>Telescope diagnostics<CR>', mode = 'n' },
+      { '<Plug>(lsp)d', '<Cmd>Telescope lsp_definitions<CR>', mode = 'n' },
+      { '<Plug>(lsp)t', '<Cmd>Telescope lsp_type_definitions<CR>', mode = 'n' },
+      { '<Plug>(lsp)D', '<Cmd>Telescope lsp_references<CR>', mode = 'n' },
     },
     config = function()
       require('telescope').setup({
