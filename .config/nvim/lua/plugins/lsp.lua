@@ -13,7 +13,7 @@ return {
         -- 'dockerls',
         -- 'docker_compose_language_service',
         -- 'html',
-        -- 'jsonls',
+        'jsonls',
         'lua_ls',
         -- 'marksman',
         -- 'nginx_language_server',
