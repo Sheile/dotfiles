@@ -8,33 +8,35 @@ return {
       { '<Leader>/', '<Cmd>Telescope live_grep<CR>', mode = 'n' },
       { '+', '<Cmd>Telescope grep_string<CR>', mode = { 'n', 'v' } },
     },
-    opts = {
-      defaults = {
-        generic_sorter = require('telescope.sorters').get_substr_matcher,
-        file_sorter = require('telescope.sorters').get_substr_matcher,
-        sorting_strategy = 'ascending',
-        layout_config = {
-          horizontal = {
-            prompt_position = 'top',
+    config = function()
+      require('telescope').setup({
+        defaults = {
+          generic_sorter = require('telescope.sorters').get_substr_matcher,
+          file_sorter = require('telescope.sorters').get_substr_matcher,
+          sorting_strategy = 'ascending',
+          layout_config = {
+            horizontal = {
+              prompt_position = 'top',
+            }
+          },
+          mappings = {
+            n = { ['q'] = 'close' },
           }
         },
-        mappings = {
-          n = { ['q'] = 'close' },
+        pickers = {
+          buffers = {
+            sort_mru = true,
+          }
+        },
+        extensions = {
+          file_browser = {
+            hidden = true,
+            hide_parent_dir = true,
+            prompt_path = true,
+          }
         }
-      },
-      pickers = {
-        buffers = {
-          sort_mru = true,
-        }
-      },
-      extensions = {
-        file_browser = {
-          hidden = true,
-          hide_parent_dir = true,
-          prompt_path = true,
-        }
-      }
-    },
+      })
+    end,
   },
   {
     'nvim-telescope/telescope-file-browser.nvim',
