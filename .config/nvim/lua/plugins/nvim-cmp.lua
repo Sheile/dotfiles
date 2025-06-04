@@ -68,10 +68,6 @@ return {
               fallback()
             end
           end, { 'i', 's' }),
-
-          ['<CR>'] = cmp.mapping.confirm { select = true },
-          ['<C-CR>'] = cmp.mapping.confirm { select = true },
-          ['<NL>'] = cmp.mapping.confirm { select = true },  -- Ctrl + Enter in terminal
         }),
         experimental = {
           ghost_text = true,
