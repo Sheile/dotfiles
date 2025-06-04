@@ -29,6 +29,11 @@ return {
               prompt_position = 'top',
             }
           },
+          vimgrep_arguments = {
+            'rg', '--color=never', '--no-heading', '--with-filename', '--line-number', '--column', '--smart-case',  -- Telescope defaults
+            '--hidden',  -- include hidden files
+            '--glob', '!**/.git/*',  -- exclude .git directory
+          },
           mappings = {
             n = { ['q'] = 'close' },
             i = { ['<esc>'] = 'close' },
