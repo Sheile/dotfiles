@@ -7,7 +7,7 @@ vim.api.nvim_create_autocmd('InsertLeave', {
 })
 
 -- Highlight trailing spaces
-local disable_filetypes = { 'TelescopePrompt', 'gitcommit', 'help', 'lazy', 'mason' }
+local disable_filetypes = { 'TelescopePrompt', 'TelescopeResults', 'gitcommit', 'help', 'lazy', 'mason' }
 vim.api.nvim_set_hl(0, 'TrailingSpaces', { bg = 'red' })
 vim.api.nvim_create_autocmd({'VimEnter', 'BufEnter', 'WinEnter', 'FileType', 'InsertLeave'}, {
   group = 'default',
