@@ -33,6 +33,7 @@ vim.keymap.set('n', 'gb', '`.zz')
 vim.keymap.set('i', 'jj', '<Esc>jj')
 vim.keymap.set({'n', 'v'}, 'j', 'gj')
 vim.keymap.set({'n', 'v'}, 'k', 'gk')
+vim.keymap.set({'v'}, 'p', 'P')  -- Preserve register contents when pasting over selection
 
 -- auto command
 require('autocommand')
