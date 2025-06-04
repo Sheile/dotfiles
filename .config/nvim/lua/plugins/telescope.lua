@@ -31,6 +31,7 @@ return {
           },
           mappings = {
             n = { ['q'] = 'close' },
+            i = { ['<esc>'] = 'close' },
           }
         },
         pickers = {
