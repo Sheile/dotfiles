@@ -8,6 +8,8 @@ vim.opt.number = true
 vim.opt.cursorline = true
 vim.opt.showmatch = true
 vim.opt.matchtime = 3
+vim.opt.list = true
+vim.opt.listchars = 'tab:>-'
 
 -- indent
 vim.opt.smartindent = true
