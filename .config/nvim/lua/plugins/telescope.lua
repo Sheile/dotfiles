@@ -6,6 +6,7 @@ return {
       { '<Leader>j', '<Cmd>Telescope buffers<CR>', mode = 'n' },
       { '<Leader>r', '<Cmd>Telescope resume<CR>', mode = 'n' },
       { '<Leader>/', '<Cmd>Telescope live_grep<CR>', mode = 'n' },
+      { '<Leader>b', '<Cmd>Telescope current_buffer_fuzzy_find<CR>', mode = 'n' },
       { '+', '<Cmd>Telescope grep_string<CR>', mode = { 'n', 'v' } },
       { '<Plug>(lsp)e', '<Cmd>Telescope diagnostics<CR>', mode = 'n' },
       { '<Plug>(lsp)d', '<Cmd>Telescope lsp_definitions<CR>', mode = 'n' },
