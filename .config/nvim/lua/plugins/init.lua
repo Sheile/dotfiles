@@ -40,6 +40,7 @@ return {
         groups = {
           all = {
             WinSeparator = { fg = 'fg3' },
+            Whitespace = { link = 'Comment' }
           }
         }
       })
