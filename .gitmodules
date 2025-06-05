@@ -1,3 +1,4 @@
-[submodule "git"]
-	path = git
+[submodule "externals/git"]
+	path = externals/git
 	url = https://github.com/git/git.git
+	branch = master

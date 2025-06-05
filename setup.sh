@@ -19,9 +19,12 @@ done
 # submoduleの読み込み
 git submodule update --init
 
+# Build diff-highlight
+make --directory externals/git/contrib/diff-highlight
+
 # $HOME/binを作成して必要なスクリプトを配置
 mkdir -p $HOME/bin
-ln -fs "$PWD/git/contrib/diff-highlight/diff-highlight" "$HOME/bin/"
+ln -fs "$PWD/externals/git/contrib/diff-highlight/diff-highlight" "$HOME/bin/"
 
 # Setup antigen to manage zsh plugins
 curl -L git.io/antigen > $HOME/.zsh/antigen.zsh
