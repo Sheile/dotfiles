@@ -90,7 +90,7 @@ bindkey '^m' do_enter
 GIT_PS1_SHOWCOLORHINTS=true
 GIT_PS1_SHOWUPSTREAM=verbose
 source ~/.zsh/git-prompt.sh
-precmd () { __git_ps1 "[%n@%m]%~" "%% " " [%s]" }
+setopt PROMPT_SUBST ; PS1='[%n@%m]%~$(__git_ps1 " (%s)")%% '
 
 # Append PATH to node
 export NODE_PATH=/opt/node
