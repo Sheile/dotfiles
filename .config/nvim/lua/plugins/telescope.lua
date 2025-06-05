@@ -51,6 +51,23 @@ return {
             hide_parent_dir = true,
             prompt_path = true,
             create_from_prompt = false,
+            mappings = {
+              ['i'] = {
+                ['~'] = function(prompt_bufnr)
+                  local fb_actions = require('telescope').extensions.file_browser.actions
+                  fb_actions.goto_home_dir(prompt_bufnr)
+                end,
+                ['/'] = function(prompt_bufnr)
+                  local fb_actions = require('telescope').extensions.file_browser.actions
+                  local prompt = vim.api.nvim_buf_get_lines(prompt_bufnr, 0, 1, false)[1]
+                  if prompt == './' then
+                    fb_actions.open_dir(prompt_bufnr, nil, '/')
+                  else
+                    fb_actions.path_separator(prompt_bufnr)
+                  end
+                end,
+              },
+            }
           }
         }
       })
