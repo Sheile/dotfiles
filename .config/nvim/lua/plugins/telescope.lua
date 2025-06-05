@@ -6,10 +6,11 @@ return {
       { '<Leader>j', '<Cmd>Telescope buffers<CR>', mode = 'n' },
       { '<Leader>r', '<Cmd>Telescope resume<CR>', mode = 'n' },
       { '<Leader>/', function()
-        local term = vim.fn.input('Search term: ')
-        if term ~= '' then
-          require('telescope.builtin').grep_string({search = term})
-        end
+        vim.ui.input({ prompt = 'Search term: ' }, function(term)
+          if term ~= nil and term ~= '' then
+            require('telescope.builtin').grep_string({search = term})
+          end
+        end)
       end, mode = 'n' },
       { '<Leader>b', '<Cmd>Telescope current_buffer_fuzzy_find<CR>', mode = 'n' },
       { '+', '<Cmd>Telescope grep_string<CR>', mode = { 'n', 'v' } },
