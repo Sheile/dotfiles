@@ -17,7 +17,7 @@ return {
         'lua_ls',
         -- 'marksman',
         -- 'nginx_language_server',
-        -- 'pylsp',
+        'pylsp',
         -- 'tailwindcss',
         'ts_ls',
         -- 'yamlls',
