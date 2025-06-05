@@ -12,5 +12,6 @@ tmp
 .config/systemd/user/tmux.service
 .config/systemd/user/default.target.wants
 
-# credentials
+# credentials or local configuration
 .config/github-copilot
+.config/gh
