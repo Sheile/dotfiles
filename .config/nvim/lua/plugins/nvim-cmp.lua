@@ -14,7 +14,7 @@ return {
       local cmp = require('cmp')
       local luasnip = require('luasnip')
       require('luasnip.loaders.from_vscode').lazy_load()
-      require('luasnip.loaders.from_vscode').lazy_load({ paths = { '/home/sheile/dotfiles/.config/nvim/snippets' } })
+      require('luasnip.loaders.from_vscode').lazy_load({ paths = { GetXdgConfigHome() ..'/nvim/snippets' } })
 
       cmp.setup({
         matching = {

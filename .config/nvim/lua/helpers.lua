@@ -13,3 +13,11 @@ function GetMatch(group)
   end
   return nil
 end
+
+function GetXdgConfigHome()
+  local xdg = os.getenv('XDG_CONFIG_HOME')
+  if xdg ~= nil and xdg ~= '' then
+    return xdg
+  end
+  return os.getenv('HOME') .. '/.config'
+end
