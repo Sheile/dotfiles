@@ -26,6 +26,9 @@ make --directory externals/git/contrib/diff-highlight
 mkdir -p $HOME/bin
 ln -fs "$PWD/externals/git/contrib/diff-highlight/diff-highlight" "$HOME/bin/"
 
+# Copy git-prompt.sh to personalize
+cp "$PWD/externals/git/contrib/completion/git-prompt.sh" "$HOME/.zsh/"
+
 # Setup antigen to manage zsh plugins
 curl -L git.io/antigen > $HOME/.zsh/antigen.zsh
 
