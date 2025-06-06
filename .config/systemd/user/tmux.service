@@ -5,6 +5,7 @@ Documentation=man:tmux(1)
 [Service]
 Type=forking
 Environment=DISPLAY=:0
+Environment=TERM=xterm-256color
 ExecStart=/usr/bin/tmux new-session -d
 
 ExecStop=/home/ec2-user/.tmux/plugins/tmux-resurrect/scripts/save.sh
