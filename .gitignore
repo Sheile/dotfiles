@@ -4,7 +4,6 @@ Thumbs.db
 backup
 
 # generated while setup
-.zsh/completions
 .agignore
 tmp
 .zsh/antigen.zsh
