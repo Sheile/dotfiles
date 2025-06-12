@@ -68,6 +68,11 @@ return {
                     fb_actions.path_separator(prompt_bufnr)
                   end
                 end,
+                -- Ctrl + CR in SSH terminal
+                ['<NL>'] = function(prompt_bufnr)
+                  local fb_actions = require('telescope').extensions.file_browser.actions
+                  fb_actions.create_from_prompt(prompt_bufnr)
+                end,
               },
             }
           }
