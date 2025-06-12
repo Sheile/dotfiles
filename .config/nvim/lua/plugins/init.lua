@@ -82,4 +82,15 @@ return {
       vim.g.ambiwidth_cica_enabled = false
     end
   },
+  {
+    'shellRaining/hlchunk.nvim',
+    event = { 'BufReadPre', 'BufNewFile' },
+    opts = {
+      indent = {
+        enable = true,
+        chars = { '│' },
+        style = { '#A83939', '#A86E39', '#A8A839', '#39A839', '#39A8A8', '#3939A8', '#7439A8' },
+      }
+    }
+  },
 }
