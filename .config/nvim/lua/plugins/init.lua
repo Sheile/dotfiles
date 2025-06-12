@@ -73,8 +73,11 @@ return {
   {
     'rbtnn/vim-ambiwidth',
     init = function()
-      -- Add △ to handle double width
-      vim.g.ambiwidth_add_list = {{0x00d7, 0x00d7, 2}, {0x25b3, 0x25b3, 2}}
+      -- Add some characters to handle as double width
+      vim.g.ambiwidth_add_list = {
+        { 0x00d7, 0x00d7, 2 }, -- ×
+        { 0x25b3, 0x25b3, 2 }, -- △
+      }
       -- Fix width of web-dev-icons in telescope
       vim.g.ambiwidth_cica_enabled = false
     end
