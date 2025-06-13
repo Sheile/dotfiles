@@ -91,6 +91,16 @@ return {
         chars = { '│' },
         style = { '#A83939', '#A86E39', '#A8A839', '#39A839', '#39A8A8', '#3939A8', '#7439A8' },
       }
+    },
+    keys = {
+      { '<Leader>pi', function()
+        local enabled, _ = pcall(vim.api.nvim_get_autocmds, { group = 'hlchunk_indent' })
+        if enabled then
+          vim.cmd('DisableHLIndent')
+        else
+          vim.cmd('EnableHLIndent')
+        end
+      end , mode = 'n' },
     }
   },
   {
