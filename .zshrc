@@ -24,13 +24,14 @@ compinit -u
 export TZ=Asia/Tokyo
 export LANG=ja_JP.utf8
 export LD_LIBRARY_PATH=/usr/local/lib:/usr/lib:/lib
+export LESS='-R -i -X'
 
 export PATH=$HOME/bin:$PATH
 
 # Aliases
 alias irb='pry'
 alias crontab='crontab -i'
-alias less='less -R -i'
+alias less='less'
 alias ls='ls --color=auto'
 alias la='ls -la'
 alias ll='ls -l'

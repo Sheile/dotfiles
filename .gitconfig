@@ -46,9 +46,9 @@
 [url "https://"]
   insteadOf = git://
 [pager]
-  log = diff-highlight | LESS='-R -i --quit-if-one-screen --no-init' less
-  show = diff-highlight | LESS='-R -i' less
-  diff = diff-highlight | LESS='-R -i' less
+  log = diff-highlight | less
+  show = diff-highlight | less
+  diff = diff-highlight | less
 [merge]
   ff = false
 [pull]
