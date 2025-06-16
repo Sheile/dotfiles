@@ -39,6 +39,11 @@ alias diff='git diff --no-index'
 alias grep='grep --color=auto'
 alias tailf='tail -f'
 
+if command -v bat >/dev/null 2>&1; then
+  alias cat='bat'
+  alias less='bat'
+fi
+
 # show filelist when change directory.
 chpwd() {
   ls -l

@@ -1,0 +1,2 @@
+# Explicitly remove -F flag to search documents which is also smaller than screen
+--pager 'less -R -i -X'
