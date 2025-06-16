@@ -28,6 +28,10 @@ export LESS='-R -i -X'
 
 export PATH=$HOME/bin:$PATH
 
+# Append PATH to node
+export NODE_PATH=/opt/node
+export PATH=$PATH:$NODE_PATH/bin
+
 # Aliases
 alias irb='pry'
 alias crontab='crontab -i'
@@ -102,10 +106,6 @@ GIT_PS1_SHOWCOLORHINTS=true
 GIT_PS1_SHOWUPSTREAM=verbose
 source ~/.zsh/git-prompt.sh
 setopt PROMPT_SUBST ; PS1='[%n@%m]%~$(__git_ps1 " (%s)")%% '
-
-# Append PATH to node
-export NODE_PATH=/opt/node
-export PATH=$PATH:$NODE_PATH/bin
 
 # Use pyenv
 if [ -f "$PYENV_ROOT/bin/pyenv" ]; then
