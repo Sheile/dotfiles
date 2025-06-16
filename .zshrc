@@ -44,6 +44,10 @@ if command -v bat >/dev/null 2>&1; then
   alias less='bat'
 fi
 
+if command -v aicommits >/dev/null 2>&1; then
+  alias aic='aicommits --generate 3'
+fi
+
 # show filelist when change directory.
 chpwd() {
   ls -l
