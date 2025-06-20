@@ -22,10 +22,11 @@ return {
       { 'gD', '<Cmd>Telescope lsp_references<CR>', mode = 'n' },
     },
     config = function()
+      local get_sorter = require('plugins/telescope/sorter')
       require('telescope').setup({
         defaults = {
-          generic_sorter = require('telescope.sorters').get_substr_matcher,
-          file_sorter = require('telescope.sorters').get_substr_matcher,
+          generic_sorter = get_sorter,
+          file_sorter = get_sorter,
           sorting_strategy = 'ascending',
           layout_config = {
             horizontal = {
