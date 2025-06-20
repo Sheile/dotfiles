@@ -39,6 +39,14 @@ return {
     },
   },
   {
+    'petertriho/nvim-scrollbar',
+    opts = {
+      handle = {
+        color = '#7A8CA3',
+      }
+    },
+  },
+  {
     'EdenEast/nightfox.nvim',
     lazy = false,
     priority = 1000,
