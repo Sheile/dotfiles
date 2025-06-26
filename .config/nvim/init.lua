@@ -10,6 +10,7 @@ vim.opt.showmatch = true
 vim.opt.matchtime = 3
 vim.opt.list = true
 vim.opt.listchars = 'tab:>-'
+vim.opt.updatetime = 300
 
 -- indent
 vim.opt.smartindent = true
