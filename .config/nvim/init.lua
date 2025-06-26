@@ -35,6 +35,10 @@ vim.opt.undodir = vim.fn.expand('~/.cache') .. '/nvim/undo'
 
 -- move
 vim.opt.scrolloff = 10
+vim.keymap.set('n', 'gh', '<C-w>h')
+vim.keymap.set('n', 'gj', '<C-w>j')
+vim.keymap.set('n', 'gk', '<C-w>k')
+vim.keymap.set('n', 'gl', '<C-w>l')
 
 -- key mapping
 vim.keymap.set('n', 'gb', '`.zz') -- Jump to last edit position and center it
