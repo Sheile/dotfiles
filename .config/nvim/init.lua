@@ -17,6 +17,7 @@ vim.opt.smartindent = true
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
+vim.opt.breakindent = true
 
 -- search
 vim.opt.ignorecase = true
