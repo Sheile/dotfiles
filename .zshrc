@@ -42,7 +42,7 @@ alias ll='ls -l'
 alias diff='git diff --no-index'
 alias grep='grep --color=auto'
 alias tailf='tail -f'
-alias sudo='sudo --preserve-env=LESS '
+alias sudo="sudo env PATH=$(sudo sh -c 'echo $PATH'):/opt/nvim/bin "
 
 if command -v bat >/dev/null 2>&1; then
   alias cat='bat'
