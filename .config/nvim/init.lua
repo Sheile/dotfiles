@@ -22,6 +22,7 @@ vim.opt.breakindent = true
 -- search
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+vim.opt.inccommand = 'split'
 vim.keymap.set('n', '<Esc>', '<Cmd>noh<CR>')
 
 -- backup/swap/undofile
