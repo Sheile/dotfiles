@@ -20,7 +20,7 @@ return {
         'pylsp',
         -- 'tailwindcss',
         'ts_ls',
-        -- 'yamlls',
+        'yamlls',
       }
     },
     keys = {
