@@ -33,6 +33,9 @@ vim.opt.backupdir = vim.fn.expand('~/.cache') .. '/nvim/backup'
 vim.opt.directory = vim.fn.expand('~/.cache') .. '/nvim/swap'
 vim.opt.undodir = vim.fn.expand('~/.cache') .. '/nvim/undo'
 
+-- move
+vim.opt.scrolloff = 10
+
 -- key mapping
 vim.keymap.set('n', 'gb', '`.zz') -- Jump to last edit position and center it
 vim.keymap.set('i', 'jj', '<Esc>jj') -- Handle wrong insert-mode input when moving down
