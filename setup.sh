@@ -16,6 +16,13 @@ for dotfile in .?*; do
     fi
 done
 
+# Generate credentials
+read "OCO_API_KEY?Please input OCO_API_KEY (OpenAI API Key) for OpenCommit: "
+cat > ~/.zsh/credentials <<EOS
+# OpenAI API Key for OpenCommit
+export OCO_API_KEY=$OCO_API_KEY
+EOS
+
 # submoduleの読み込み
 git submodule update --init
 

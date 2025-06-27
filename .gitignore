@@ -14,3 +14,4 @@ tmp
 # credentials or local configuration
 .config/github-copilot
 .config/gh
+.zsh/credentials
