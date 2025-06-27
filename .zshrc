@@ -17,8 +17,11 @@ alias b='cd ..'
 unsetopt auto_menu
 
 fpath=(~/.zsh/completions $fpath)
-autoload -Uz compinit
-compinit -u
+autoload -Uz compinit && compinit -u
+if command -v aws_completer >/dev/null 2>&1; then
+  autoload bashcompinit && bashcompinit
+  complete -C '/usr/bin/aws_completer' aws
+fi
 
 # Environment variables
 export TZ=Asia/Tokyo
