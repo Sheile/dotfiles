@@ -27,6 +27,8 @@ return {
       { '<Leader>l', '<Plug>(lsp)', mode = 'n' },
       { '<Plug>(lsp)f', vim.lsp.buf.format, mode = 'n' },
       { '<Plug>(lsp)r', vim.lsp.buf.rename, mode = 'n' },
+      { 'g[', vim.diagnostic.goto_prev, mode = 'n' },
+      { 'g]', vim.diagnostic.goto_next, mode = 'n' },
     },
   },
   {
