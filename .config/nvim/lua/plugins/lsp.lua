@@ -8,7 +8,7 @@ return {
     lazy = false,
     opts = {
       ensure_installed = {
-        -- 'bashls',
+        'bashls',
         -- 'cssls',
         -- 'dockerls',
         -- 'docker_compose_language_service',
