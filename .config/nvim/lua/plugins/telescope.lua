@@ -51,6 +51,7 @@ return {
         extensions = {
           file_browser = {
             hidden = true,
+            respect_gitignore = false,
             hide_parent_dir = true,
             prompt_path = true,
             create_from_prompt = false,
