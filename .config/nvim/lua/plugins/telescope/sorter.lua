@@ -66,9 +66,9 @@ return function()
         local has_upper_case = not not prompt:match "%u"
         return has_upper_case and display or display:lower()
       end
-    or function(_, display)
-      return display:lower()
-    end
+      or function(_, display)
+        return display:lower()
+      end
 
   return Sorter:new {
     highlighter = substr_highlighter(make_display),
