@@ -1,3 +1,9 @@
+local vimgrep_arguments = {
+  'rg', '--color=never', '--no-heading', '--with-filename', '--line-number', '--column', '--smart-case', -- Telescope defaults
+  '--hidden', -- include hidden files
+  '--glob', '!**/.git/*', -- exclude .git directory
+}
+
 return {
   {
     'nvim-telescope/telescope.nvim',
@@ -13,7 +19,15 @@ return {
         end)
       end, mode = 'n' },
       { '<Leader>b', '<Cmd>Telescope current_buffer_fuzzy_find<CR>', mode = 'n' },
-      { '+', '<Cmd>Telescope grep_string<CR>', mode = { 'n', 'v' } },
+      { '+', function()
+        local word = vim.fn.expand('<cword>')
+        local vimgrep_arguments_with_word = vim.list_extend({}, vimgrep_arguments)
+        table.insert(vimgrep_arguments_with_word, '--word-regexp')
+        require('telescope.builtin').grep_string({
+          search = word,
+          vimgrep_arguments = vimgrep_arguments_with_word
+        })
+      end, mode = { 'n', 'v' } },
       { '<Plug>(lsp)e', '<Cmd>Telescope diagnostics<CR>', mode = 'n' },
       { '<Plug>(lsp)d', '<Cmd>Telescope lsp_definitions<CR>', mode = 'n' },
       { '<Plug>(lsp)t', '<Cmd>Telescope lsp_type_definitions<CR>', mode = 'n' },
@@ -33,11 +47,7 @@ return {
               prompt_position = 'top',
             }
           },
-          vimgrep_arguments = {
-            'rg', '--color=never', '--no-heading', '--with-filename', '--line-number', '--column', '--smart-case',  -- Telescope defaults
-            '--hidden',  -- include hidden files
-            '--glob', '!**/.git/*',  -- exclude .git directory
-          },
+          vimgrep_arguments = vimgrep_arguments,
           mappings = {
             n = { ['q'] = 'close' },
             i = { ['<esc>'] = 'close' },
