@@ -65,6 +65,7 @@ return {
             hide_parent_dir = true,
             prompt_path = true,
             create_from_prompt = false,
+            follow_symlinks = true,
             mappings = {
               ['i'] = {
                 ['~'] = function(prompt_bufnr)
