@@ -1,4 +1,4 @@
-local vimgrep_arguments = {
+local default_vimgrep_arguments = {
   'rg', '--color=never', '--no-heading', '--with-filename', '--line-number', '--column', '--smart-case', -- Telescope defaults
   '--hidden', -- include hidden files
   '--glob', '!**/.git/*', -- exclude .git directory
@@ -20,12 +20,21 @@ return {
       end, mode = 'n' },
       { '<Leader>b', '<Cmd>Telescope current_buffer_fuzzy_find<CR>', mode = 'n' },
       { '+', function()
-        local word = vim.fn.expand('<cword>')
-        local vimgrep_arguments_with_word = vim.list_extend({}, vimgrep_arguments)
-        table.insert(vimgrep_arguments_with_word, '--word-regexp')
+        local word
+        local vimgrep_arguments = vim.list_extend({}, default_vimgrep_arguments)
+        if vim.fn.mode() == 'v' or vim.fn.mode() == 'V' then
+          -- Visual mode: grep selected text
+          local start_pos = vim.fn.getpos('v')
+          local end_pos = vim.fn.getpos('.')
+          word = table.concat(vim.fn.getregion(start_pos, end_pos))
+        else
+          -- Normal mode: grep word under cursor with word boundary for exact word search
+          word = vim.fn.expand('<cword>')
+          table.insert(vimgrep_arguments, '--word-regexp')
+        end
         require('telescope.builtin').grep_string({
           search = word,
-          vimgrep_arguments = vimgrep_arguments_with_word
+          vimgrep_arguments = vimgrep_arguments
         })
       end, mode = { 'n', 'v' } },
       { '<Plug>(lsp)e', '<Cmd>Telescope diagnostics<CR>', mode = 'n' },
