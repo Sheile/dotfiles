@@ -84,6 +84,11 @@ zle -N history-beginning-search-forward-end history-search-end
 bindkey "^P" history-beginning-search-backward-end
 bindkey "^N" history-beginning-search-forward-end
 
+# pecoを使った各種検索を追加
+if command -v peco >/dev/null 2>&1; then
+  source ~/.zsh/peco.sh
+fi
+
 # 空Enterでgit status表示
 function do_enter() {
   if [ -n "$BUFFER" ]; then
