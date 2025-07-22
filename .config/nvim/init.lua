@@ -25,6 +25,10 @@ vim.opt.smartcase = true
 vim.opt.inccommand = 'split'
 vim.keymap.set('n', '<Esc>', '<Cmd>noh<CR>')
 
+-- Use SmartCase when search current word by */#
+vim.keymap.set('n', '*', '/\\<<C-R>=expand(\'<cword>\')<CR>\\><CR>', { expr = false })
+vim.keymap.set('n', '#', '?\\<<C-R>=expand(\'<cword>\')<CR>\\><CR>', { expr = false })
+
 -- backup/swap/undofile
 vim.opt.backup = true
 vim.opt.swapfile = false
