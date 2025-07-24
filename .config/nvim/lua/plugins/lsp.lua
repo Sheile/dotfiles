@@ -21,6 +21,7 @@ return {
         -- 'tailwindcss',
         'ts_ls',
         'yamlls',
+        'eslint',
       }
     },
     keys = {
