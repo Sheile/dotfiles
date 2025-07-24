@@ -50,7 +50,7 @@ vim.keymap.set('i', 'jj', '<Esc>jj') -- Handle wrong insert-mode input when movi
 vim.keymap.set({'n', 'v'}, 'j', 'gj') -- Move down one screen-line (wrapped text)
 vim.keymap.set({'n', 'v'}, 'k', 'gk') -- Move up one screen-line (wrapped text)
 vim.keymap.set({'x'}, 'p', 'P')  -- Preserve register contents when pasting over selection
-vim.keymap.set({'n', 'x'}, 'x', '"_dl')  -- Preserve register contents when delete single character
+vim.keymap.set({'n'}, 'x', '"_dl')  -- Preserve register contents when delete single character
 vim.keymap.set({'o', 'x'}, 'i<Space>', 'iw')  -- Use 'i␣' as a text-object for the inner word (e.g. di␣ instead of diw)
 vim.keymap.set({'n'}, 'U', '<C-r>')  -- Redo with 'U' (complement to undo with 'u')
 vim.keymap.set({'n'}, 'M', '%') -- Jump to matching parenthesis
