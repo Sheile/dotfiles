@@ -14,11 +14,11 @@ vim.api.nvim_create_autocmd({'VimEnter', 'BufEnter', 'WinEnter', 'FileType', 'In
   callback = function()
     local match = GetMatch('TrailingSpaces')
     if match then
-      if Contains(disable_filetypes, vim.bo.filetype) then
+      if Contains(disable_filetypes, vim.bo.filetype) or IsFloatingWindow() then
         vim.fn.matchdelete(match.id)
       end
     else
-      if not Contains(disable_filetypes, vim.bo.filetype) then
+      if not Contains(disable_filetypes, vim.bo.filetype) and not IsFloatingWindow() then
         vim.fn.matchadd('TrailingSpaces', [[\s\+$]])
       end
     end

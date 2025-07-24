@@ -21,3 +21,9 @@ function GetXdgConfigHome()
   end
   return os.getenv('HOME') .. '/.config'
 end
+
+-- Check if current window is floating
+function IsFloatingWindow()
+  local win_config = vim.api.nvim_win_get_config(0)
+  return win_config.relative ~= ''
+end
