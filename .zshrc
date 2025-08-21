@@ -115,7 +115,7 @@ bindkey '^m' do_enter
 GIT_PS1_SHOWCOLORHINTS=true
 GIT_PS1_SHOWUPSTREAM=verbose
 source ~/.zsh/git-prompt.sh
-setopt PROMPT_SUBST ; PS1='[%n@%m]%~$(__git_ps1 " (%s)")%% '
+setopt PROMPT_SUBST ; PS1='[%n@%M]%~$(__git_ps1 " (%s)")%% '
 
 # Use pyenv
 if [ -f "$PYENV_ROOT/bin/pyenv" ]; then
