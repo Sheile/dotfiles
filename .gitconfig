@@ -21,21 +21,14 @@
   co = checkout
   ci = commit
   d = diff
-  di = diff
   dc = diff --cached
-  dic = diff --cached
   l = log --graph -n 20 --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(green)- %an, %cr%Creset'
   la = log --graph -n 20 --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(green)- %an, %cr%Creset' --branches
   ll = log --stat --abbrev-commit
   ln = log --graph -n 20 --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(green)- %an, %cr%Creset' --name-status
   lp = log --stat -n 20 -p
   ls = log --stat --abbrev-commit -n 1 # display previous log
-  puhs = push
-  psuh = push
-  pus = push
-  puh = push
   pushf = push --force-with-lease
-  pl = !git pull && git submodule update --init
   s = status --short --branch
   st = status -sb
   tree = log --graph --pretty=oneline --decorate --date=short --abbrev-commit --branches
