@@ -47,7 +47,14 @@ alias diff='git diff --no-index'
 alias grep='grep --color=auto'
 alias tailf='tail -f'
 alias fd='fd --hidden --no-ignore --glob'
-alias sudo="sudo env PATH=$(sudo sh -c 'echo $PATH'):/opt/nvim/bin "
+
+# Use PATH for root user when sudo without password
+if sudo -n true 2>/dev/null; then
+  ROOT_PATH=$(sudo -n sh -c 'echo $PATH' 2>/dev/null)
+else
+  ROOT_PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+fi
+alias sudo="sudo env PATH=${ROOT_PATH}:/opt/nvim/bin "
 
 if command -v bat >/dev/null 2>&1; then
   alias cat='bat'
