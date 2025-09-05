@@ -61,6 +61,11 @@ vim.keymap.set({'n'}, 'i', function() -- On empty line, enter insert mode with i
   return 'i'
 end, { expr = true, noremap = true, silent = true })
 
+-- replace quoted text block without spaces besides quote
+for _, quote in ipairs({'"', "'", '`'}) do
+    vim.keymap.set({'x', 'o'}, 'a' .. quote, '2i' .. quote)
+end
+
 -- auto command
 require('autocommand')
 
