@@ -62,6 +62,14 @@ if command -v bat >/dev/null 2>&1; then
   alias less='bat'
 fi
 
+if command -v ag >/dev/null 2>&1; then
+  alias ag='ag --hidden --ignore .git --follow'
+fi
+
+if command -v rg >/dev/null 2>&1; then
+  export RIPGREP_CONFIG_PATH=~/.config/ripgrep/.ripgreprc
+fi
+
 if command -v aicommits >/dev/null 2>&1; then
   alias aic='aicommits --generate 3'
 fi

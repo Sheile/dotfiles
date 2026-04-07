@@ -1,0 +1,8 @@
+# Search hidden files / directories (e.g. dotfiles) by default
+--hidden
+
+# Ignore .git directory even when searching hidden paths.
+--glob=!.git/*
+
+# Recursive search follows symbolic links
+--follow
