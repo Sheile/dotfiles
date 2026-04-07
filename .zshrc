@@ -14,6 +14,7 @@ setopt pushd_ignore_dups
 alias b='cd ..'
 
 # 補完関連
+setopt glob_star_short
 unsetopt auto_menu
 
 fpath=(~/.zsh/completions $fpath)
