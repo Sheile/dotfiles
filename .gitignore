@@ -6,8 +6,7 @@ backup
 # generated while setup
 .agignore
 tmp
-.zsh/antigen.zsh
-.zsh/antigenrc.zwc
+.zsh/antigen/antigen.zsh
 .config/systemd/user/tmux.service
 .config/systemd/user/default.target.wants
 

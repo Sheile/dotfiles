@@ -37,7 +37,7 @@ ln -fs "$PWD/externals/git/contrib/diff-highlight/diff-highlight" "$HOME/bin/"
 cp "$PWD/externals/git/contrib/completion/git-prompt.sh" "$HOME/.zsh/"
 
 # Setup antigen to manage zsh plugins
-curl -L git.io/antigen > $HOME/.zsh/antigen.zsh
+curl -L git.io/antigen > $HOME/.zsh/antigen/antigen.zsh
 
 # Prepare directory for zsh completions
 mkdir -p $HOME/.zsh/completions

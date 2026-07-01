@@ -1,7 +1,7 @@
 bindkey -e
 
 # Load Plugins
-source ~/.zsh/antigenrc
+source ~/.zsh/antigen/antigenrc
 
 setopt ignore_eof
 setopt interactive_comments
