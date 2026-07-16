@@ -14,26 +14,21 @@ return {
   },
   'github/copilot.vim',
   {
-    'nvim-treesitter/nvim-treesitter',
-    build = ':TSUpdate',
+    'romus204/tree-sitter-manager.nvim',
     config = function()
-      local configs = require('nvim-treesitter.configs')
-      configs.setup({
-        ensure_installed = {
-          'c', 'lua', 'vim', 'vimdoc', 'query', 'bash', 'javascript', 'html', 'css', 'csv',
-          'git_config', 'git_rebase', 'gitcommit', 'gitignore', 'json', 'markdown_inline',
-          'perl', 'php', 'python', 'requirements', 'ruby', 'rust', 'scss', 'sql',
-          'ssh_config', 'tmux', 'toml', 'typescript', 'xml', 'yaml'
-        },
-        sync_install = false,
-        highlight = { enable = true },
-        indent = { enable = true },
+      require('tree-sitter-manager').setup({
+        ensure_installed = {'gitcommit'},
+        auto_install = true
       })
-    end
+      vim.o.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+      vim.o.foldlevel = 99
+      vim.o.foldmethod = 'expr'
+      vim.o.foldtext = ''
+    end,
   },
   {
     'nvim-treesitter/nvim-treesitter-context',
-    dependencies = { 'nvim-treesitter/nvim-treesitter' },
+    dependencies = { 'romus204/tree-sitter-manager.nvim' },
     opts = {
       separator = '-',
     },

@@ -7,7 +7,7 @@ local default_vimgrep_arguments = {
 return {
   {
     'nvim-telescope/telescope.nvim',
-    dependencies = { 'nvim-lua/plenary.nvim', 'nvim-treesitter/nvim-treesitter' },
+    dependencies = { 'nvim-lua/plenary.nvim', 'romus204/tree-sitter-manager.nvim' },
     keys = {
       { '<Leader>j', '<Cmd>Telescope buffers<CR>', mode = 'n' },
       { '<Leader>r', '<Cmd>Telescope resume<CR>', mode = 'n' },
