@@ -50,7 +50,7 @@ alias ll='ls -l'
 alias diff='git diff --no-index'
 alias grep='grep --color=auto'
 alias tailf='tail -f'
-alias fd='fd --hidden --no-ignore --glob'
+alias fd='fd --hidden --no-ignore --glob --exclude .git --exclude .aws-sam --exclude node_modules'
 
 # Use PATH for root user when sudo without password
 if sudo -n true 2>/dev/null; then
