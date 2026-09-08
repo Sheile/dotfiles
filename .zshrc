@@ -63,7 +63,7 @@ if command -v bat >/dev/null 2>&1; then
 fi
 
 if command -v ag >/dev/null 2>&1; then
-  alias ag='ag --hidden --ignore .git --follow'
+  alias ag='ag --hidden --skip-vcs-ignores --ignore .git --ignore .aws-sam --ignore node_modules --follow'
 fi
 
 if command -v rg >/dev/null 2>&1; then

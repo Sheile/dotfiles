@@ -1,8 +1,13 @@
 # Search hidden files / directories (e.g. dotfiles) by default
 --hidden
 
+# Search files even if they are listed in .gitignore
+--no-ignore-vcs
+
 # Ignore .git directory even when searching hidden paths.
---glob=!.git/*
+--glob=!.git
+--glob=!.aws-sam
+--glob=!node_modules
 
 # Recursive search follows symbolic links
 --follow
