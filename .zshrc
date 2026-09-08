@@ -13,6 +13,9 @@ setopt auto_pushd
 setopt pushd_ignore_dups
 alias b='cd ..'
 
+autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
+add-zsh-hook chpwd chpwd_recent_dirs
+
 # 補完関連
 setopt glob_star_short
 unsetopt auto_menu
