@@ -50,7 +50,7 @@ alias ll='ls -l'
 alias diff='git diff --no-index'
 alias grep='grep --color=auto'
 alias tailf='tail -f'
-alias fd='fd --hidden --no-ignore --glob --exclude .git --exclude .aws-sam --exclude node_modules'
+alias fd='fd --hidden --no-ignore --glob --exclude .git --exclude .aws-sam --exclude node_modules --exclude .serverless'
 
 # Use PATH for root user when sudo without password
 if sudo -n true 2>/dev/null; then
@@ -66,7 +66,7 @@ if command -v bat >/dev/null 2>&1; then
 fi
 
 if command -v ag >/dev/null 2>&1; then
-  alias ag='ag --hidden --skip-vcs-ignores --ignore .git --ignore .aws-sam --ignore node_modules --follow'
+  alias ag='ag --hidden --skip-vcs-ignores --ignore .git --ignore .aws-sam --ignore node_modules --ignore .serverless --follow'
 fi
 
 if command -v rg >/dev/null 2>&1; then

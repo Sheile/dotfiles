@@ -8,6 +8,7 @@
 --glob=!.git
 --glob=!.aws-sam
 --glob=!node_modules
+--glob=!.serverless
 
 # Recursive search follows symbolic links
 --follow
