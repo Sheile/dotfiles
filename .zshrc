@@ -34,7 +34,7 @@ export LANG=ja_JP.utf8
 export LD_LIBRARY_PATH=/usr/local/lib:/usr/lib:/lib
 export LESS='-R -i -X'
 
-export PATH=$HOME/bin:$HOME/.cargo/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:$HOME/.cargo/bin:$PATH
 
 # Append PATH to node
 export NODE_PATH=/opt/node
