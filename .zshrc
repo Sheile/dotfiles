@@ -28,7 +28,7 @@ if command -v aws_completer >/dev/null 2>&1; then
 fi
 
 # Environment variables
-source ~/.zsh/credentials
+[[ -f ~/.zsh/credentials ]] && source ~/.zsh/credentials
 export TZ=Asia/Tokyo
 export LANG=ja_JP.utf8
 export LD_LIBRARY_PATH=/usr/local/lib:/usr/lib:/lib
